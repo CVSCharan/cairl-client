@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Webniar = () => {
-  return (
-    <div>Webniar</div>
-  )
-}
+  return <div>Webniar</div>;
+};
 
-export default Webniar
+export default Webniar;

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Webinar = () => {
-  return (
-    <div>Webinar</div>
-  )
-}
+  return <div>Webinar</div>;
+};
 
-export default Webinar
+export default Webinar;
