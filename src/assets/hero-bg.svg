@@ -1,0 +1,26 @@
+<svg width="1440" height="800" viewBox="0 0 1440 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="800" fill="#001F3F"/>
+  <rect x="0" y="0" width="1440" height="800" fill="url(#paint0_linear)" fill-opacity="0.2"/>
+  
+  <!-- Abstract tech pattern -->
+  <path d="M0 400 L1440 400" stroke="#0066CC" stroke-width="1" stroke-opacity="0.1"/>
+  <path d="M720 0 L720 800" stroke="#0066CC" stroke-width="1" stroke-opacity="0.1"/>
+  
+  <!-- Circles representing data nodes -->
+  <circle cx="400" cy="300" r="100" fill="#0066CC" fill-opacity="0.05"/>
+  <circle cx="1000" cy="500" r="150" fill="#0066CC" fill-opacity="0.05"/>
+  <circle cx="200" cy="600" r="80" fill="#0066CC" fill-opacity="0.05"/>
+  <circle cx="1200" cy="200" r="120" fill="#0066CC" fill-opacity="0.05"/>
+  
+  <!-- Connection lines -->
+  <path d="M400 300 L1000 500" stroke="#0066CC" stroke-width="1" stroke-opacity="0.1"/>
+  <path d="M400 300 L200 600" stroke="#0066CC" stroke-width="1" stroke-opacity="0.1"/>
+  <path d="M1000 500 L1200 200" stroke="#0066CC" stroke-width="1" stroke-opacity="0.1"/>
+  
+  <defs>
+    <linearGradient id="paint0_linear" x1="0" y1="0" x2="1440" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0066CC" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#001F3F" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>

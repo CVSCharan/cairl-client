@@ -1,0 +1,35 @@
+<svg width="1440" height="600" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="600" fill="#0066CC"/>
+  
+  <!-- Abstract digital pattern -->
+  <path d="M0 0 L1440 600" stroke="white" stroke-width="1" stroke-opacity="0.05"/>
+  <path d="M0 600 L1440 0" stroke="white" stroke-width="1" stroke-opacity="0.05"/>
+  
+  <!-- Grid pattern -->
+  <path d="M0 150 L1440 150" stroke="white" stroke-width="1" stroke-opacity="0.05"/>
+  <path d="M0 300 L1440 300" stroke="white" stroke-width="1" stroke-opacity="0.05"/>
+  <path d="M0 450 L1440 450" stroke="white" stroke-width="1" stroke-opacity="0.05"/>
+  
+  <path d="M360 0 L360 600" stroke="white" stroke-width="1" stroke-opacity="0.05"/>
+  <path d="M720 0 L720 600" stroke="white" stroke-width="1" stroke-opacity="0.05"/>
+  <path d="M1080 0 L1080 600" stroke="white" stroke-width="1" stroke-opacity="0.05"/>
+  
+  <!-- Digital circuit pattern -->
+  <circle cx="360" cy="150" r="5" fill="white" fill-opacity="0.1"/>
+  <circle cx="720" cy="150" r="5" fill="white" fill-opacity="0.1"/>
+  <circle cx="1080" cy="150" r="5" fill="white" fill-opacity="0.1"/>
+  
+  <circle cx="360" cy="300" r="5" fill="white" fill-opacity="0.1"/>
+  <circle cx="720" cy="300" r="5" fill="white" fill-opacity="0.1"/>
+  <circle cx="1080" cy="300" r="5" fill="white" fill-opacity="0.1"/>
+  
+  <circle cx="360" cy="450" r="5" fill="white" fill-opacity="0.1"/>
+  <circle cx="720" cy="450" r="5" fill="white" fill-opacity="0.1"/>
+  <circle cx="1080" cy="450" r="5" fill="white" fill-opacity="0.1"/>
+  
+  <!-- Wave pattern -->
+  <path d="M0 100 Q180 50, 360 100 Q540 150, 720 100 Q900 50, 1080 100 Q1260 150, 1440 100" stroke="white" stroke-width="1" stroke-opacity="0.1"/>
+  <path d="M0 250 Q180 200, 360 250 Q540 300, 720 250 Q900 200, 1080 250 Q1260 300, 1440 250" stroke="white" stroke-width="1" stroke-opacity="0.1"/>
+  <path d="M0 400 Q180 350, 360 400 Q540 450, 720 400 Q900 350, 1080 400 Q1260 450, 1440 400" stroke="white" stroke-width="1" stroke-opacity="0.1"/>
+  <path d="M0 550 Q180 500, 360 550 Q540 600, 720 550 Q900 500, 1080 550 Q1260 600, 1440 550" stroke="white" stroke-width="1" stroke-opacity="0.1"/>
+</svg>
