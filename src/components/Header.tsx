@@ -79,7 +79,7 @@ const Header: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2">
+          <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2 w-full">
             {/* About us Dropdown */}
             <div className="relative">
               <button
@@ -108,7 +108,7 @@ const Header: React.FC = () => {
                 </svg>
               </button>
               {activeDropdown === "about" && (
-                <div className="absolute top-full left-0 mt-1 w-80 bg-white rounded-lg shadow-lg border border-gray-100 py-4 px-6 animate-fadeIn">
+                <div className="absolute top-full left-0 mt-2 w-[50vw] flex justify-center bg-white rounded-lg shadow-lg border border-gray-100 py-4 px-6 animate-fadeIn">
                   <div className="grid grid-cols-2 gap-6">
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-3">
@@ -259,7 +259,7 @@ const Header: React.FC = () => {
                 </svg>
               </button>
               {activeDropdown === "services" && (
-                <div className="absolute top-full left-0 mt-1 w-96 bg-white rounded-lg shadow-lg border border-gray-100 py-4 px-6 animate-fadeIn">
+                <div className="absolute top-full left-0 mt-2 w-[50vw] flex justify-center bg-white rounded-lg shadow-lg border border-gray-100 py-4 px-6 animate-fadeIn">
                   <div className="grid grid-cols-2 gap-6">
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-3">
@@ -411,7 +411,7 @@ const Header: React.FC = () => {
                 </svg>
               </button>
               {activeDropdown === "research" && (
-                <div className="absolute top-full left-0 mt-1 w-80 bg-white rounded-lg shadow-lg border border-gray-100 py-4 px-6 animate-fadeIn">
+                <div className="absolute top-full left-0 mt-2 w-[50vw] flex justify-center bg-white rounded-lg shadow-lg border border-gray-100 py-4 px-6 animate-fadeIn">
                   <h3 className="font-semibold text-gray-900 mb-3">
                     RESEARCH & INNOVATION
                   </h3>
@@ -503,7 +503,7 @@ const Header: React.FC = () => {
                 </svg>
               </button>
               {activeDropdown === "happenings" && (
-                <div className="absolute top-full left-0 mt-1 w-80 bg-white rounded-lg shadow-lg border border-gray-100 py-4 px-6 animate-fadeIn">
+                <div className="absolute top-full left-0 mt-2 w-[50vw] flex justify-center bg-white rounded-lg shadow-lg border border-gray-100 py-4 px-6 animate-fadeIn">
                   <h3 className="font-semibold text-gray-900 mb-3">
                     HAPPENINGS
                   </h3>
@@ -601,7 +601,7 @@ const Header: React.FC = () => {
                 </svg>
               </button>
               {activeDropdown === "focus-groups" && (
-                <div className="absolute top-full left-0 mt-1 w-72 bg-white rounded-lg shadow-lg border border-gray-100 py-4 px-6 animate-fadeIn">
+                <div className="absolute top-full left-0 mt-2 w-[50vw] flex justify-center bg-white rounded-lg shadow-lg border border-gray-100 py-4 px-6 animate-fadeIn">
                   <h3 className="font-semibold text-gray-900 mb-3">
                     ENTERPRISE AI ADOPTION
                   </h3>
@@ -657,7 +657,7 @@ const Header: React.FC = () => {
                 </svg>
               </button>
               {activeDropdown === "resources" && (
-                <div className="absolute top-full left-0 mt-1 w-[28rem] bg-white rounded-lg shadow-lg border border-gray-100 py-4 px-6 animate-fadeIn">
+                <div className="absolute top-full left-0 mt-2 w-[50vw] flex justify-center bg-white rounded-lg shadow-lg border border-gray-100 py-4 px-6 animate-fadeIn">
                   <div className="grid grid-cols-4 gap-6">
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-3">

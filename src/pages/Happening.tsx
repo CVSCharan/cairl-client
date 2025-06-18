@@ -1,7 +1,198 @@
-
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const Happening = () => {
-  return <div>Happening</div>;
+  return (
+    <main className="min-h-screen bg-[#F6F6F6] flex flex-col">
+      <Header />
+
+      {/* Hero Section */}
+      <div className="bg-[#005BA9] text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl font-bold mb-4">Happenings at CAiRL</h1>
+          <p className="text-xl max-w-3xl mx-auto">
+            AI is an ever-evolving field, and at CAiRL, we ensure you stay ahead
+            of the curve. Our events, webinars, and visual journeys bring
+            together the brightest minds, groundbreaking innovations, and
+            real-world impact.
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Events Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+          <div>
+            <h2 className="text-3xl font-bold text-[#005BA9] mb-6">Events</h2>
+            <p className="text-gray-700 mb-6">
+              CAiRL hosts and collaborates on high-impact AI events that bring
+              together:
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-start">
+                <span className="bg-[#005BA9] text-white rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  •
+                </span>
+                <span className="text-gray-700">
+                  Global AI Leaders – Experts from industry, academia, and
+                  government.
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="bg-[#005BA9] text-white rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  •
+                </span>
+                <span className="text-gray-700">
+                  Innovators & Researchers – Pioneering breakthroughs in AI.
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="bg-[#005BA9] text-white rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  •
+                </span>
+                <span className="text-gray-700">
+                  Startups & Enterprises – Scaling AI adoption across
+                  industries.
+                </span>
+              </li>
+            </ul>
+            <p className="font-semibold text-gray-700 mb-4">
+              Why it Matters: CAiRL's events shape AI conversations and ignite
+              industry collaboration.
+            </p>
+            <button className="px-6 py-3 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors">
+              Know more
+            </button>
+          </div>
+          <div className="bg-gray-200 rounded-xl h-full min-h-[300px] flex items-center justify-center">
+            <span className="text-gray-500">Event Image/Video</span>
+          </div>
+        </div>
+
+        {/* Webinars Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+          <div className="order-last lg:order-first">
+            <div className="bg-gray-200 rounded-xl h-full min-h-[300px] flex items-center justify-center">
+              <span className="text-gray-500">Webinar Image/Video</span>
+            </div>
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold text-[#005BA9] mb-6">Webinars</h2>
+            <p className="text-gray-700 mb-6">
+              Our webinars provide on-demand AI expertise from world-class
+              speakers:
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-start">
+                <span className="bg-[#005BA9] text-white rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  •
+                </span>
+                <span className="text-gray-700">
+                  Exclusive Fireside Chats – Conversations with AI pioneers.
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="bg-[#005BA9] text-white rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  •
+                </span>
+                <span className="text-gray-700">
+                  Live Demos & Workshops – Deep dives into AI applications.
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="bg-[#005BA9] text-white rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  •
+                </span>
+                <span className="text-gray-700">
+                  Expert Panels – Discussing AI trends, regulations, and
+                  innovations.
+                </span>
+              </li>
+            </ul>
+            <p className="font-semibold text-gray-700 mb-4">
+              Why it Matters: Stay ahead with AI insights from global experts.
+            </p>
+          </div>
+        </div>
+
+        {/* Visual Journey Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <h2 className="text-3xl font-bold text-[#005BA9] mb-6">
+              Visual Journey
+            </h2>
+            <p className="text-gray-700 mb-6">
+              A picture speaks a thousand words—our Visual Journey captures the
+              milestones, achievements, and impact of CAiRL.
+            </p>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-start">
+                <span className="bg-[#005BA9] text-white rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  •
+                </span>
+                <span className="text-gray-700">
+                  Awards & Recognitions – Honouring our contributions to AI
+                  innovation.
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="bg-[#005BA9] text-white rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  •
+                </span>
+                <span className="text-gray-700">
+                  Achiever's Journey – Showcasing winners of CAiRL Hackathons &
+                  Challenges.
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="bg-[#005BA9] text-white rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-3">
+                  •
+                </span>
+                <span className="text-gray-700">
+                  Event Highlights – A glimpse into our summits, conferences,
+                  and AI bootcamps.
+                </span>
+              </li>
+            </ul>
+            <p className="font-semibold text-gray-700 mb-4">
+              Explore our journey through images & videos – See how CAiRL is
+              shaping AI's future!
+            </p>
+            <button className="px-6 py-3 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors">
+              Know more
+            </button>
+          </div>
+          <div className="bg-gray-200 rounded-xl h-full min-h-[300px] flex items-center justify-center">
+            <span className="text-gray-500">Visual Journey Gallery</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Newsletter Section */}
+      <div className="bg-[#F0F7FF] py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-[#005BA9] mb-4">
+            Subscribe to our newsletter
+          </h2>
+          <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
+            Subscribe to our newsletter or follow us online to stay ahead in AI.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your Email"
+              className="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#005BA9]"
+            />
+            <button className="px-6 py-3 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors whitespace-nowrap">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
+    </main>
+  );
 };
 
 export default Happening;
