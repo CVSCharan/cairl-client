@@ -51,7 +51,7 @@ const Services = () => {
                   title: "Center of Excellence",
                   desc: "Guidance and strategic support to set up AI-focused Centers of Excellence in research institutions and enterprises.",
                   image:
-                    "https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=160&fit=crop&crop=center",
+                    "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750333388/services-card-img-2_ixty21.jpg",
                 },
                 {
                   title: "AI Tech Conferences & Summits",
