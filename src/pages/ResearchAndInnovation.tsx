@@ -36,7 +36,7 @@ const ResearchAndInnovation = () => {
               "Publishing AI white papers, frameworks, and best practices for industry adoption.",
             ],
             image:
-              "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750324458/research-innovation-img-7_zlyfwb.jpg",
+              "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750324894/research-innovation-img-9_kcezsa.jpg",
           },
           {
             title: "AI Education & Skill Development",
@@ -84,7 +84,7 @@ const ResearchAndInnovation = () => {
               "Rural AI outreach – Bringing AI-powered education and resources to underprivileged areas.",
             ],
             image:
-              "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750324894/research-innovation-img-9_kcezsa.jpg",
+              "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750324458/research-innovation-img-7_zlyfwb.jpg",
           },
           {
             title: "AI Mentorship & Startup Support",
