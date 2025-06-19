@@ -184,7 +184,7 @@ const About = () => {
 
       {/* Vision Section */}
       <div className="relative bg-transparent text-center flex flex-col items-center mb-12 pt-10">
-        {/* Bottom wavy border */}
+        {/* Top wavy border */}
         <div className="absolute top-0 left-0 right-0 w-full h-12 overflow-hidden">
           <img
             src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750247127/wavy-top-gray_rkk6ly.png"

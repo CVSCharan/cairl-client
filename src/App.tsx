@@ -11,6 +11,7 @@ import About from "./pages/About";
 import Events from "./pages/Events";
 import ResearchAndInnovation from "./pages/ResearchAndInnovation";
 import Services from "./pages/Services";
+import Engage from "./pages/Engage";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
         <Route path="/events" element={<Events />} />
         <Route path="/services" element={<Services />} />
         <Route path="/about-us" element={<About />} />
+        <Route path="/engage-with-us" element={<Engage />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/ai-bootcamps" element={<Bootcamps />} />
         <Route
