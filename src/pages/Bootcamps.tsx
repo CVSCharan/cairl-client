@@ -1,232 +1,377 @@
+import { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 const Bootcamps = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date(2025, 6, 10)); // July 10, 2025
+  const [currentMonth, setCurrentMonth] = useState(new Date(2025, 6, 1)); // July 2025
+
+  const daysInMonth = (month: number, year: number) => {
+    return new Date(year, month + 1, 0).getDate();
+  };
+
+  const firstDayOfMonth = (month: number, year: number) => {
+    return new Date(year, month, 1).getDay();
+  };
+
+  const renderCalendar = () => {
+    const month = currentMonth.getMonth();
+    const year = currentMonth.getFullYear();
+    const totalDays = daysInMonth(month, year);
+    const firstDay = firstDayOfMonth(month, year);
+
+    // Previous month days
+    const prevMonthDays = daysInMonth(month - 1, year);
+    const prevMonthDaysToShow = firstDay;
+
+    // Next month days
+    const totalCells = Math.ceil((totalDays + firstDay) / 7) * 7;
+    const nextMonthDaysToShow = totalCells - (totalDays + firstDay);
+
+    const days = [];
+
+    // Previous month
+    for (
+      let i = prevMonthDays - prevMonthDaysToShow + 1;
+      i <= prevMonthDays;
+      i++
+    ) {
+      days.push(
+        <td key={`prev-${i}`} className="py-2 text-gray-400">
+          {i}
+        </td>
+      );
+    }
+
+    // Current month
+    for (let i = 1; i <= totalDays; i++) {
+      const date = new Date(year, month, i);
+      const isSelected =
+        date.getDate() === selectedDate.getDate() &&
+        date.getMonth() === selectedDate.getMonth() &&
+        date.getFullYear() === selectedDate.getFullYear();
+
+      days.push(
+        <td
+          key={`curr-${i}`}
+          className={`py-2 ${
+            isSelected
+              ? "text-white bg-[#005BA9] rounded-full mx-auto w-8 h-8 flex items-center justify-center"
+              : ""
+          }`}
+          onClick={() => setSelectedDate(date)}
+        >
+          {i}
+        </td>
+      );
+    }
+
+    // Next month
+    for (let i = 1; i <= nextMonthDaysToShow; i++) {
+      days.push(
+        <td key={`next-${i}`} className="py-2 text-gray-400">
+          {i}
+        </td>
+      );
+    }
+
+    // Split into weeks
+    const weeks = [];
+    for (let i = 0; i < days.length; i += 7) {
+      weeks.push(<tr key={`week-${i}`}>{days.slice(i, i + 7)}</tr>);
+    }
+
+    return weeks;
+  };
+
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  const bootcamps = [
+    {
+      title: "AI & Machine Learning Bootcamp",
+      description:
+        "Immersive AI And Machine Learning Program Covering Neural Networks, NLP, And Computer Vision. Duration: 12 Weeks. Prerequisites: Basic Programming Knowledge.",
+      date: "June 11, 2025",
+      time: "09:30 AM - 10:30 AM (IST)",
+      location: "T-Hub",
+      price: "Rs 4,500",
+      image:
+        "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750264297/Bootcamp-img-1_t1icqv.png",
+    },
+    {
+      title: "AI Product Design Lab",
+      description:
+        "User Experience Design Bootcamp Focusing On AI-Driven Product Design, User Research, And AI Prototyping. Duration: 10 Weeks. Prerequisites: Design Thinking Basics.",
+      date: "June 11, 2025",
+      time: "09:30 AM - 10:30 AM (IST)",
+      location: "T-Hub",
+      price: "Rs 4,500",
+      image:
+        "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750264297/Bootcamp-img-2_avjgse.png",
+    },
+    {
+      title: "Data Science Bootcamp",
+      description:
+        "Comprehensive Data Science Bootcamp Focusing On Machine Learning, Data Analysis, And Visualization With AI Applications. Duration: 16 Weeks. Prerequisites: Statistics And Programming Fundamentals.",
+      date: "June 11, 2025",
+      time: "09:30 AM - 10:30 AM (IST)",
+      location: "T-Hub",
+      price: "Rs 4,500",
+      image:
+        "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750264297/Bootcamp-img-3_zp4g0e.png",
+    },
+  ];
+
+  const dayNames = ["S", "M", "T", "W", "T", "F", "S"];
+
+  const formatSelectedDate = (date: Date) => {
+    return date.toLocaleDateString("en-US", {
+      weekday: "short",
+      month: "short",
+      day: "numeric",
+    });
+  };
+
   return (
     <main className="min-h-screen bg-[#F6F6F6] flex flex-col">
       <Header />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10 pt-28">
         {/* Page Heading */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-[#005BA9] mb-4">
+          <h4 className="inline-block bg-[#E5F5FC] text-[#005BA9] px-4 py-2 rounded-full mb-4">
             AI Bootcamps & Workshops
-          </h1>
+          </h4>
+          <h1 className="text-4xl font-bold text-[#0D2E37] mb-4">Events</h1>
+          <div className="flex justify-center gap-4 mb-8">
+            <button className="px-4 py-2 bg-[#005BA9] text-white rounded-full font-medium">
+              All Bootcamps
+            </button>
+            <button className="px-4 py-2 bg-white text-[#005BA9] border border-[#005BA9] rounded-full font-medium">
+              Ongoing Bootcamps
+            </button>
+            <button className="px-4 py-2 bg-white text-[#005BA9] border border-[#005BA9] rounded-full font-medium">
+              Upcoming Bootcamps
+            </button>
+            <button className="px-4 py-2 bg-white text-[#005BA9] border border-[#005BA9] rounded-full font-medium">
+              Past Bootcamps
+            </button>
+          </div>
         </div>
 
-        {/* Bootcamp Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {/* AI Machine Learning Bootcamp */}
-          <div className="bg-white rounded-xl shadow-md overflow-hidden">
-            <div className="p-6">
-              <h2 className="text-2xl font-bold text-[#005BA9] mb-4">
-                AI Machine Learning Bootcamp
-              </h2>
-              <p className="text-gray-600 mb-6">
-                Innovation: AI and Machine Learning Bootcamp. Exceeding Natural
-                Resources, LLC, Asia Common Vision, Customer to Vehicle,
-                Precipitation, Table Programming Knowledge.
+        {/* Main Content Area */}
+        <div className="flex flex-col lg:flex-row gap-8 mb-8">
+          {/* Left Column - Bootcamp Listings */}
+          <div className="lg:w-2/3 space-y-6">
+            {bootcamps.map((bootcamp, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col md:flex-row"
+              >
+                <div className="md:w-2/5 relative">
+                  <img
+                    src={bootcamp.image}
+                    alt={bootcamp.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="md:w-3/5 p-6">
+                  <h2 className="text-xl font-bold text-[#005BA9] mb-3">
+                    {bootcamp.title}
+                  </h2>
+                  <p className="text-gray-600 text-sm mb-4">
+                    {bootcamp.description}
+                  </p>
+
+                  <div className="space-y-2 mb-4 text-sm text-gray-700">
+                    <div className="flex items-center">
+                      <svg
+                        className="h-4 w-4 mr-2 text-[#005BA9]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                      <span>{bootcamp.date}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <svg
+                        className="h-4 w-4 mr-2 text-[#005BA9]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      <span>{bootcamp.time}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <svg
+                        className="h-4 w-4 mr-2 text-[#005BA9]"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        />
+                      </svg>
+                      <span>{bootcamp.location}</span>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between items-center">
+                    <span className="font-bold text-lg">{bootcamp.price}</span>
+                    <a
+                      href="#"
+                      className="px-4 py-2 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors"
+                    >
+                      Enroll Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Right Column - Calendar */}
+          <div className="lg:w-1/3 sticky top-8">
+            <div className="bg-white rounded-xl shadow-md p-6 mb-8">
+              <div className="flex justify-between items-center mb-6">
+                <h2 className="text-2xl font-bold text-[#005BA9]">Schedule</h2>
+                <div className="flex items-center space-x-4">
+                  <button
+                    onClick={() =>
+                      setCurrentMonth(
+                        new Date(
+                          currentMonth.getFullYear(),
+                          currentMonth.getMonth() - 1
+                        )
+                      )
+                    }
+                    className="p-1 rounded-full hover:bg-gray-100"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                  <span className="font-medium">
+                    {monthNames[currentMonth.getMonth()]}{" "}
+                    {currentMonth.getFullYear()}
+                  </span>
+                  <button
+                    onClick={() =>
+                      setCurrentMonth(
+                        new Date(
+                          currentMonth.getFullYear(),
+                          currentMonth.getMonth() + 1
+                        )
+                      )
+                    }
+                    className="p-1 rounded-full hover:bg-gray-100"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <table className="w-full mb-6">
+                <thead>
+                  <tr className="text-gray-600">
+                    {dayNames.map((day) => (
+                      <th key={day} className="py-2 text-center">
+                        {day}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="text-center">{renderCalendar()}</tbody>
+              </table>
+
+              <div className="mb-6">
+                <h3 className="font-bold text-lg mb-2">Selected Bootcamp</h3>
+                <p className="text-[#005BA9] font-medium">
+                  {formatSelectedDate(selectedDate)}
+                </p>
+              </div>
+            </div>
+
+            {/* Selected Bootcamp Details */}
+            <div className="bg-white rounded-xl shadow-md p-6">
+              <h3 className="font-bold text-lg mb-4">Selected Bootcamp</h3>
+              <p className="text-[#005BA9] font-medium mb-4">
+                {formatSelectedDate(selectedDate)}
               </p>
-
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center">
-                  <div className="w-5 h-5 border-2 border-gray-300 rounded mr-3"></div>
-                  <span>Jan 11, 2025</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-5 h-5 border-2 border-[#005BA9] bg-[#005BA9] rounded mr-3 flex items-center justify-center text-white">
-                    ✓
-                  </div>
-                  <span>10:30 AM - 01:30 PM (EST)</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-5 h-5 border-2 border-gray-300 rounded mr-3"></div>
-                  <span>Friday</span>
-                </div>
-              </div>
-
-              <div className="flex justify-between items-center border-t border-gray-200 pt-4">
-                <span className="font-bold text-lg">Rs 4,500</span>
-                <a
-                  href="#"
-                  className="px-4 py-2 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors"
-                >
-                  Register Now
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* AI Product Design Lab */}
-          <div className="bg-white rounded-xl shadow-md overflow-hidden">
-            <div className="p-6">
-              <h2 className="text-2xl font-bold text-[#005BA9] mb-4">
-                AI Product Design Lab
-              </h2>
-              <p className="text-gray-600 mb-6">
-                User Experience Design Bootcamp Focusing On-Aid-Server Product
-                Design, User Service Provider, AI Prototyping, Duration, 10
-                Weeks, Precipitation, Design Thinking Logo.
-              </p>
-
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center">
-                  <div className="w-5 h-5 border-2 border-gray-300 rounded mr-3"></div>
-                  <span>Jan 11, 2025</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-5 h-5 border-2 border-[#005BA9] bg-[#005BA9] rounded mr-3 flex items-center justify-center text-white">
-                    ✓
-                  </div>
-                  <span>10:30 AM - 01:30 PM (EST)</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-5 h-5 border-2 border-gray-300 rounded mr-3"></div>
-                  <span>Friday</span>
+              <div className="bg-white rounded-lg p-4 border border-gray-100">
+                <h4 className="text-lg font-semibold text-[#005BA9] mb-2">
+                  UI/UX Bootcamp
+                </h4>
+                <p className="text-gray-600 text-sm mb-4">
+                  Desain UI/UX, Membekali Dengan Pengetahuan Dan Keteramplian.
+                </p>
+                <div className="flex justify-between items-center">
+                  <span className="font-bold text-lg">Rs 4,500</span>
+                  <a
+                    href="#"
+                    className="px-4 py-2 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors"
+                  >
+                    Enroll Now
+                  </a>
                 </div>
               </div>
-
-              <div className="flex justify-between items-center border-t border-gray-200 pt-4">
-                <span className="font-bold text-lg">Rs 4,500</span>
-                <a
-                  href="#"
-                  className="px-4 py-2 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors"
-                >
-                  Register Now
-                </a>
-              </div>
             </div>
-          </div>
-
-          {/* Data Science Bootcamp */}
-          <div className="bg-white rounded-xl shadow-md overflow-hidden">
-            <div className="p-6">
-              <h2 className="text-2xl font-bold text-[#005BA9] mb-4">
-                Data Science Bootcamp
-              </h2>
-              <p className="text-gray-600 mb-6">
-                Correspondence to the Science-Mathematics-Focusing-On-Machine
-                Training Data Analysis. Any Presentation for AI Applications,
-                Customer to Vehicle, Precipitation, Solution, And Programming
-                Fundamentals.
-              </p>
-
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center">
-                  <div className="w-5 h-5 border-2 border-[#005BA9] bg-[#005BA9] rounded mr-3 flex items-center justify-center text-white">
-                    ✓
-                  </div>
-                  <span>Jan 11, 2025</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-5 h-5 border-2 border-[#005BA9] bg-[#005BA9] rounded mr-3 flex items-center justify-center text-white">
-                    ✓
-                  </div>
-                  <span>10:30 AM - 01:30 PM (EST)</span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-5 h-5 border-2 border-gray-300 rounded mr-3"></div>
-                  <span>Friday</span>
-                </div>
-              </div>
-
-              <div className="flex justify-between items-center border-t border-gray-200 pt-4">
-                <span className="font-bold text-lg">Rs 4,500</span>
-                <a
-                  href="#"
-                  className="px-4 py-2 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors"
-                >
-                  Register Now
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Past Events Section */}
-        <div className="bg-white rounded-xl shadow-md p-8 mb-16">
-          <h2 className="text-2xl font-bold text-[#005BA9] mb-6">
-            Watch Past Events On-Demand
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex items-center">
-              <div className="w-5 h-5 border-2 border-gray-300 rounded mr-3"></div>
-              <span>Chat Event</span>
-            </div>
-            <div className="flex items-center">
-              <div className="w-5 h-5 border-2 border-gray-300 rounded mr-3"></div>
-              <span>Chat Event</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Additional Sections */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {/* AI & Healthcare */}
-          <div className="bg-white rounded-xl shadow-md p-6">
-            <h3 className="text-xl font-bold text-[#005BA9] mb-4">
-              AI & Healthcare
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Transforming patient care with AI.
-            </p>
-            <div className="flex items-center">
-              <div className="w-5 h-5 border-2 border-gray-300 rounded mr-3"></div>
-              <span>Generative AI & Ethics</span>
-            </div>
-            <div className="flex items-center mt-2">
-              <div className="w-5 h-5 border-2 border-gray-300 rounded mr-3"></div>
-              <span>Responsible AI selection concepts</span>
-            </div>
-          </div>
-
-          {/* AI In FinTech */}
-          <div className="bg-white rounded-xl shadow-md p-6">
-            <h3 className="text-xl font-bold text-[#005BA9] mb-4">
-              AI In FinTech
-            </h3>
-            <p className="text-gray-600">
-              How AI is mobilizing financial services.
-            </p>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="bg-[#005BA9] text-white rounded-xl shadow-md p-8 mb-16 text-center">
-          <h2 className="text-2xl font-bold mb-4">
-            Ready to make an impact with CAIRL?
-          </h2>
-          <p className="mb-6 max-w-2xl mx-auto">
-            Explore how you can get involved as a student, executive, partner,
-            or operator.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="px-6 py-3 bg-white text-[#005BA9] rounded-lg font-medium hover:bg-gray-100 transition-colors">
-              Advance on Network
-            </button>
-            <button className="px-6 py-3 bg-white text-[#005BA9] rounded-lg font-medium hover:bg-gray-100 transition-colors">
-              Downloads of Response
-            </button>
-            <button className="px-6 py-3 bg-white text-[#005BA9] rounded-lg font-medium hover:bg-gray-100 transition-colors">
-              Close at Performance
-            </button>
-          </div>
-        </div>
-
-        {/* Newsletter Section */}
-        <div className="bg-white rounded-xl shadow-md p-8 text-center">
-          <h2 className="text-2xl font-bold text-[#005BA9] mb-2">CAIRL</h2>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Select the true expressions of tokens as shown in any details in it.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your Email"
-              className="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#005BA9]"
-            />
-            <button className="px-6 py-3 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors whitespace-nowrap">
-              Submit
-            </button>
           </div>
         </div>
       </div>

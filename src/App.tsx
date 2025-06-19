@@ -8,6 +8,8 @@ import VisualJourney from "./pages/VisualJourney";
 import Happening from "./pages/Happening";
 import Bootcamps from "./pages/Bootcamps";
 import About from "./pages/About";
+import Events from "./pages/Events";
+import ResearchAndInnovation from "./pages/ResearchAndInnovation";
 
 const queryClient = new QueryClient();
 
@@ -16,9 +18,14 @@ const App = () => (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/events" element={<Events />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/ai-bootcamps" element={<Bootcamps />} />
+        <Route
+          path="/research-innovation"
+          element={<ResearchAndInnovation />}
+        />
         <Route path="/happenings" element={<Happening />} />
         <Route path="/webinar" element={<Webinar />} />
         <Route path="/journey" element={<VisualJourney />} />

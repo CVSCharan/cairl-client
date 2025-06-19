@@ -7,12 +7,9 @@ const About: React.FC = () => {
       id="about-us"
     >
       <div className="container flex flex-col justify-center items-center text-center px-4">
-        <a
-          href="!#"
-          className="bg-[#E5F5FC] text-[#005BA9] px-4 py-2 rounded-full mb-4"
-        >
+        <h4 className="bg-[#E5F5FC] text-[#005BA9] px-4 py-2 rounded-full mb-4">
           About us
-        </a>
+        </h4>
         <div className="section-header mb-6">
           <h2 className="section-title text-3xl font-bold">
             Leading the Future of AI Innovation

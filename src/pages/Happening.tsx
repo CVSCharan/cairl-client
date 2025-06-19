@@ -3,13 +3,18 @@ import Header from "../components/Header";
 
 const Happening = () => {
   return (
-    <main className="min-h-screen bg-[#F6F6F6] flex flex-col">
+    <main className="min-h-screen bg-transparent flex flex-col">
       <Header />
 
       {/* Hero Section */}
-      <div className="bg-[#005BA9] text-white py-20">
+      <div className="bg-transparent flex flex-col justify-center items-center text-white py-20 mt-16">
+        <h4 className="inline-block bg-[#E5F5FC] text-[#005BA9] px-4 py-2 rounded-full mb-4">
+          Happenings
+        </h4>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl font-bold mb-4">Happenings at CAiRL</h1>
+          <h1 className="text-4xl text-[#0D2E37] font-bold mb-4">
+            Happenings at CAiRL
+          </h1>
           <p className="text-xl max-w-3xl mx-auto">
             AI is an ever-evolving field, and at CAiRL, we ensure you stay ahead
             of the curve. Our events, webinars, and visual journeys bring
@@ -64,17 +69,23 @@ const Happening = () => {
               Know more
             </button>
           </div>
-          <div className="bg-gray-200 rounded-xl h-full min-h-[300px] flex items-center justify-center">
-            <span className="text-gray-500">Event Image/Video</span>
+          <div className="rounded-xl h-full min-h-[300px] overflow-hidden">
+            <img
+              src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750262916/happenings-events-card-img_fjbkec.png"
+              alt="CAiRL Events"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 
         {/* Webinars Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
-          <div className="order-last lg:order-first">
-            <div className="bg-gray-200 rounded-xl h-full min-h-[300px] flex items-center justify-center">
-              <span className="text-gray-500">Webinar Image/Video</span>
-            </div>
+          <div className="order-last lg:order-first rounded-xl h-full min-h-[300px] overflow-hidden">
+            <img
+              src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750262924/happenings-webinar-card-img_othucx.jpg"
+              alt="CAiRL Webinars"
+              className="w-full h-full object-cover"
+            />
           </div>
           <div>
             <h2 className="text-3xl font-bold text-[#005BA9] mb-6">Webinars</h2>
@@ -112,6 +123,9 @@ const Happening = () => {
             <p className="font-semibold text-gray-700 mb-4">
               Why it Matters: Stay ahead with AI insights from global experts.
             </p>
+            <button className="px-6 py-3 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors">
+              Know more
+            </button>
           </div>
         </div>
 
@@ -162,14 +176,18 @@ const Happening = () => {
               Know more
             </button>
           </div>
-          <div className="bg-gray-200 rounded-xl h-full min-h-[300px] flex items-center justify-center">
-            <span className="text-gray-500">Visual Journey Gallery</span>
+          <div className="rounded-xl h-full max-h-[450px] overflow-hidden">
+            <img
+              src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750262917/happenings-visual-journey-card-img_ppw12b.jpg"
+              alt="CAiRL Visual Journey"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
 
       {/* Newsletter Section */}
-      <div className="bg-[#F0F7FF] py-16">
+      <div className="bg-[#F0F7FF] py-24 mt-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-[#005BA9] mb-4">
             Subscribe to our newsletter
