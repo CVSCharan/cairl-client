@@ -8,11 +8,11 @@ const Happening = () => {
 
       {/* Hero Section */}
       <div className="bg-transparent flex flex-col justify-center items-center text-white py-20 mt-16">
-        <h4 className="inline-block bg-[#E5F5FC] text-[#005BA9] px-4 py-2 rounded-full mb-4">
+        <h4 className="inline-block bg-[#E5F5FC] text-[#005BA9] px-4 py-2 rounded-full mb-8">
           Happenings
         </h4>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl text-[#0D2E37] font-bold mb-4">
+          <h1 className="text-4xl text-[#0D2E37] font-bold mb-8">
             Happenings at CAiRL
           </h1>
           <p className="text-xl max-w-3xl mx-auto">

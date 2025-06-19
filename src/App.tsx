@@ -27,8 +27,8 @@ const App = () => (
           element={<ResearchAndInnovation />}
         />
         <Route path="/happenings" element={<Happening />} />
-        <Route path="/webinar" element={<Webinar />} />
-        <Route path="/journey" element={<VisualJourney />} />
+        <Route path="/webinars" element={<Webinar />} />
+        <Route path="/visual-journey" element={<VisualJourney />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

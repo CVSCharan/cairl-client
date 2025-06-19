@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import CTA from "../components/CTA";
 
 const Bootcamps = () => {
   const [selectedDate, setSelectedDate] = useState(new Date(2025, 6, 10)); // July 10, 2025
@@ -148,7 +149,7 @@ const Bootcamps = () => {
   return (
     <main className="min-h-screen bg-[#F6F6F6] flex flex-col">
       <Header />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10 pt-28">
+      <section className="max-w-7xl mx-auto relative z-10 pt-28">
         {/* Page Heading */}
         <div className="text-center mb-12">
           <h4 className="inline-block bg-[#E5F5FC] text-[#005BA9] px-4 py-2 rounded-full mb-4">
@@ -176,21 +177,21 @@ const Bootcamps = () => {
         {/* Main Content Area */}
         <div className="flex flex-col lg:flex-row gap-8 mb-8">
           {/* Left Column - Bootcamp Listings */}
-          <div className="lg:w-2/3 space-y-6">
+          <div className="w-full lg:w-2/3 space-y-6">
             {bootcamps.map((bootcamp, index) => (
               <div
                 key={index}
                 className="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col md:flex-row"
               >
-                <div className="md:w-2/5 relative">
+                <div className="md:w-2/5 w-full h-48 md:h-auto">
                   <img
                     src={bootcamp.image}
                     alt={bootcamp.title}
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="md:w-3/5 p-6">
-                  <h2 className="text-xl font-bold text-[#005BA9] mb-3">
+                <div className="md:w-3/5 w-full p-4 sm:p-6">
+                  <h2 className="text-xl font-bold text-[#005BA9] mb-2 sm:mb-3">
                     {bootcamp.title}
                   </h2>
                   <p className="text-gray-600 text-sm mb-4">
@@ -254,7 +255,7 @@ const Bootcamps = () => {
                     </div>
                   </div>
 
-                  <div className="flex justify-between items-center">
+                  <div className="flex justify-between items-center mt-4">
                     <span className="font-bold text-lg">{bootcamp.price}</span>
                     <a
                       href="#"
@@ -269,8 +270,8 @@ const Bootcamps = () => {
           </div>
 
           {/* Right Column - Calendar */}
-          <div className="lg:w-1/3 sticky top-8">
-            <div className="bg-white rounded-xl shadow-md p-6 mb-8">
+          <div className="w-full lg:w-1/3 flex flex-col gap-8">
+            <div className="bg-white rounded-xl shadow-md p-6">
               <div className="flex justify-between items-center mb-6">
                 <h2 className="text-2xl font-bold text-[#005BA9]">Schedule</h2>
                 <div className="flex items-center space-x-4">
@@ -329,7 +330,7 @@ const Bootcamps = () => {
                 </div>
               </div>
 
-              <table className="w-full mb-6">
+              <table className="w-full mb-6 text-sm">
                 <thead>
                   <tr className="text-gray-600">
                     {dayNames.map((day) => (
@@ -342,20 +343,20 @@ const Bootcamps = () => {
                 <tbody className="text-center">{renderCalendar()}</tbody>
               </table>
 
-              <div className="mb-6">
-                <h3 className="font-bold text-lg mb-2">Selected Bootcamp</h3>
+              <div className="mb-4">
+                <h3 className="font-bold text-base sm:text-lg mb-1">
+                  Selected Date
+                </h3>
                 <p className="text-[#005BA9] font-medium">
                   {formatSelectedDate(selectedDate)}
                 </p>
               </div>
             </div>
 
-            {/* Selected Bootcamp Details */}
             <div className="bg-white rounded-xl shadow-md p-6">
-              <h3 className="font-bold text-lg mb-4">Selected Bootcamp</h3>
-              <p className="text-[#005BA9] font-medium mb-4">
-                {formatSelectedDate(selectedDate)}
-              </p>
+              <h3 className="font-bold text-base sm:text-lg mb-2">
+                Selected Bootcamp
+              </h3>
               <div className="bg-white rounded-lg p-4 border border-gray-100">
                 <h4 className="text-lg font-semibold text-[#005BA9] mb-2">
                   UI/UX Bootcamp
@@ -376,7 +377,96 @@ const Bootcamps = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Past Events Section */}
+      <section className="w-full max-w-7xl mx-auto relative z-10 mt-16 pb-28">
+        <div className="bg-[#F6F6F6] py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span className="inline-block bg-[#E5F5FC] text-[#005BA9] px-4 py-1 rounded-full text-sm font-medium mb-4">
+              Past Events
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#0D2E37] mb-12">
+              Watch Past Events On-Demand
+            </h2>
+
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {/* Card 1 */}
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div className="relative aspect-video bg-gray-100 flex items-center justify-center">
+                  {/* Play Button Placeholder */}
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
+                    <svg
+                      className="w-6 h-6 text-gray-700"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="p-4 text-left">
+                  <h3 className="text-[#005BA9] font-semibold mb-1">
+                    AI & Healthcare
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Transforming patient care with AI.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 2 */}
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div className="relative aspect-video bg-gray-100 flex items-center justify-center">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
+                    <svg
+                      className="w-6 h-6 text-gray-700"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="p-4 text-left">
+                  <h3 className="text-[#005BA9] font-semibold mb-1">
+                    Generative AI & Ethics
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Responsible AI adoption strategies.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div className="relative aspect-video bg-gray-100 flex items-center justify-center">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md">
+                    <svg
+                      className="w-6 h-6 text-gray-700"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                </div>
+                <div className="p-4 text-left">
+                  <h3 className="text-[#005BA9] font-semibold mb-1">
+                    AI in FinTech
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    How AI is redefining financial services.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <CTA />
+      </section>
+
       <Footer />
     </main>
   );
