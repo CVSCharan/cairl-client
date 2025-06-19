@@ -370,9 +370,9 @@ const About = () => {
           {/* Text Content */}
           <div className="lg:w-1/2">
             <div className="inline-block px-4 py-2 rounded-full bg-[#E5F5FC] text-[#005BA9] text-sm font-medium mb-4">
-              MOLs and Strategic Partnerships
+              MOUs and Strategic Partnerships
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">MOLs</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">MOUs</h2>
             <p className="text-gray-600 mb-8 text-lg">
               At CAIRL, we understand that collaboration is key to driving
               innovation and creating impactful AI solutions. We are proud to

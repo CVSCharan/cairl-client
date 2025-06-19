@@ -10,6 +10,7 @@ import Bootcamps from "./pages/Bootcamps";
 import About from "./pages/About";
 import Events from "./pages/Events";
 import ResearchAndInnovation from "./pages/ResearchAndInnovation";
+import Services from "./pages/Services";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/ai-bootcamps" element={<Bootcamps />} />
