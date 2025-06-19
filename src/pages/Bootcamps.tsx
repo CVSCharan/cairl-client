@@ -120,7 +120,7 @@ const Bootcamps = () => {
       location: "T-Hub",
       price: "Rs 4,500",
       image:
-        "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750264297/Bootcamp-img-2_avjgse.png",
+        "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750264297/Bootcamp-img-3_zp4g0e.png",
     },
     {
       title: "Data Science Bootcamp",
@@ -131,7 +131,7 @@ const Bootcamps = () => {
       location: "T-Hub",
       price: "Rs 4,500",
       image:
-        "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750264297/Bootcamp-img-3_zp4g0e.png",
+        "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750264297/Bootcamp-img-2_avjgse.png",
     },
   ];
 
@@ -152,10 +152,12 @@ const Bootcamps = () => {
         {/* Page Heading */}
         <div className="text-center mb-12">
           <h4 className="inline-block bg-[#E5F5FC] text-[#005BA9] px-4 py-2 rounded-full mb-4">
-            AI Bootcamps & Workshops
+            Bootcamps
           </h4>
-          <h1 className="text-4xl font-bold text-[#0D2E37] mb-4">Events</h1>
-          <div className="flex justify-center gap-4 mb-8">
+          <h1 className="text-4xl font-bold text-[#0D2E37] mb-4">
+            AI Bootcamps & Workshops
+          </h1>
+          <div className="flex justify-center gap-4 mt-16 mb-4">
             <button className="px-4 py-2 bg-[#005BA9] text-white rounded-full font-medium">
               All Bootcamps
             </button>
