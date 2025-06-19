@@ -20,9 +20,9 @@ const Services = () => {
 
         <div className="w-full">
           <img
-            src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750244957/about_img_1_b5biqp.png"
-            alt="About CAiRL"
-            className="w-full h-auto object-cover rounded-2xl"
+            src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750332593/services-landing-img_vubko6.jpg"
+            alt="CAiRL Services"
+            className="w-full h-[450px] object-cover rounded-2xl"
           />
         </div>
 
