@@ -189,7 +189,7 @@ const Header: React.FC = () => {
           <div className="hidden md:flex items-center ml-4">
             <Link
               to="/engage-with-us"
-              className="bg-[#005BA9] text-white px-4 py-2.5 rounded-full text-sm font-medium transition-colors hover:bg-[#004A8F] whitespace-nowrap"
+              className="bg-[#005BA9] text-white px-4 py-2.5 rounded-full text-sm font-medium transition-colors hover:no-underline whitespace-nowrap"
               onClick={closeAllDropdowns}
             >
               Engage with us
