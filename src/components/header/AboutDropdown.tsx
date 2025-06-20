@@ -1,6 +1,5 @@
 import React from "react";
 import DropdownMenu from "./DropdownMenu";
-import { Link } from "react-router-dom";
 
 interface AboutDropdownProps {
   isOpen: boolean;
@@ -18,40 +17,40 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
           </h3>
           <ul className="space-y-3">
             <li>
-              <Link
-                to="/about-us#mission"
+              <a
+                href="/about-us#mission"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Our Mission
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/about-us#vision"
+              <a
+                href="/about-us#vision"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Our Vision
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/about-us#objectives"
+              <a
+                href="/about-us#objectives"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Objectives
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/about-us#goals"
+              <a
+                href="/about-us#goals"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Goals
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
@@ -63,40 +62,40 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
           </h3>
           <ul className="space-y-3">
             <li>
-              <Link
-                to="/about-us#strategic-advisors"
+              <a
+                href="/about-us#strategic-advisors"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Strategic Advisor
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/about-us#academic-advisors"
+              <a
+                href="/about-us#academic-advisors"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Academic Advisor
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/about-us#industry-advisors"
+              <a
+                href="/about-us#industry-advisors"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Industry Advisor
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="/about-us#technology-advisors"
+              <a
+                href="/about-us#technology-advisors"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Technology Advisor
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
@@ -106,13 +105,13 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
           <h3 className="font-semibold text-gray-900 mb-4 text-lg">OUR TEAM</h3>
           <ul className="space-y-3 mb-6">
             <li>
-              <Link
-                to="/about-us#board-members"
+              <a
+                href="/about-us#board-members"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Board Members & Management Team
-              </Link>
+              </a>
             </li>
           </ul>
 
@@ -121,26 +120,26 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
           </h3>
           <ul className="space-y-3 mb-6">
             <li>
-              <Link
-                to="/about-us#mou"
+              <a
+                href="/about-us#mou"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 View All Partnerships
-              </Link>
+              </a>
             </li>
           </ul>
 
           <h3 className="font-semibold text-gray-900 mb-4 text-lg">FAQs</h3>
           <ul className="space-y-3">
             <li>
-              <Link
-                to="/about-us#faqs"
+              <a
+                href="/about-us#faqs"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Frequently Asked Questions
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
