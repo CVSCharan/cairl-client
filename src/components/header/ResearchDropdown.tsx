@@ -1,23 +1,26 @@
-import React from 'react';
-import DropdownMenu from './DropdownMenu';
+import React from "react";
+import DropdownMenu from "./DropdownMenu";
 
 interface ResearchDropdownProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const ResearchDropdown: React.FC<ResearchDropdownProps> = ({ isOpen, onClose }) => {
+const ResearchDropdown: React.FC<ResearchDropdownProps> = ({
+  isOpen,
+  onClose,
+}) => {
   return (
     <DropdownMenu isOpen={isOpen} onClose={onClose}>
-      <div>
-        <h3 className="font-semibold text-gray-900 mb-3">
+      <div className="p-6 w-full">
+        <h3 className="font-semibold text-gray-900 mb-4 text-lg">
           RESEARCH & INNOVATION
         </h3>
-        <ul className="space-y-2">
+        <ul className="space-y-3">
           <li>
             <a
               href="#ai-research"
-              className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+              className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
               onClick={onClose}
             >
               AI Research & Thought Leadership
@@ -26,7 +29,7 @@ const ResearchDropdown: React.FC<ResearchDropdownProps> = ({ isOpen, onClose }) 
           <li>
             <a
               href="#ai-education"
-              className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+              className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
               onClick={onClose}
             >
               AI Education & Skill Development
@@ -35,7 +38,7 @@ const ResearchDropdown: React.FC<ResearchDropdownProps> = ({ isOpen, onClose }) 
           <li>
             <a
               href="#ecosystem"
-              className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+              className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
               onClick={onClose}
             >
               AI Ecosystem Building & Partnerships
@@ -44,7 +47,7 @@ const ResearchDropdown: React.FC<ResearchDropdownProps> = ({ isOpen, onClose }) 
           <li>
             <a
               href="#hackathons-innovation"
-              className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+              className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
               onClick={onClose}
             >
               AI Hackathons & Innovation Challenges
@@ -53,7 +56,7 @@ const ResearchDropdown: React.FC<ResearchDropdownProps> = ({ isOpen, onClose }) 
           <li>
             <a
               href="#sustainability"
-              className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+              className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
               onClick={onClose}
             >
               AI for Social Good & Sustainability
@@ -62,7 +65,7 @@ const ResearchDropdown: React.FC<ResearchDropdownProps> = ({ isOpen, onClose }) 
           <li>
             <a
               href="#mentorship"
-              className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+              className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
               onClick={onClose}
             >
               AI Mentorship & Startup Support

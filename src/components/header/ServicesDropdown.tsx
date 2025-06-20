@@ -9,16 +9,17 @@ interface ServicesDropdownProps {
 const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) => {
   return (
     <DropdownMenu isOpen={isOpen} onClose={onClose}>
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-3 gap-8 p-6">
+        {/* Column 1 - CAPACITY BUILDING & KNOWLEDGE EMPOWERMENT */}
         <div>
-          <h3 className="font-semibold text-gray-900 mb-3">
-            CAPACITY BUILDING
+          <h3 className="font-semibold text-gray-900 mb-4 text-lg">
+            CAPACITY BUILDING & KNOWLEDGE EMPOWERMENT
           </h3>
-          <ul className="space-y-2">
+          <ul className="space-y-3">
             <li>
               <a
                 href="#bootcamps"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 AI Bootcamps
@@ -27,7 +28,7 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) 
             <li>
               <a
                 href="#workshops"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Workshops
@@ -36,7 +37,7 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) 
             <li>
               <a
                 href="#excellence"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Center of Excellence
@@ -45,7 +46,7 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) 
             <li>
               <a
                 href="#conferences"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 AI Tech Conference & Summits
@@ -53,15 +54,17 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) 
             </li>
           </ul>
         </div>
+
+        {/* Column 2 - INNOVATION & STARTUP SUPPORT */}
         <div>
-          <h3 className="font-semibold text-gray-900 mb-3">
+          <h3 className="font-semibold text-gray-900 mb-4 text-lg">
             INNOVATION & STARTUP SUPPORT
           </h3>
-          <ul className="space-y-2">
+          <ul className="space-y-3">
             <li>
               <a
                 href="#hackathons"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Hackathons & Innovation Challenges
@@ -70,7 +73,7 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) 
             <li>
               <a
                 href="#incubators"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Startup Incubators & Innovation Hubs
@@ -79,21 +82,25 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) 
             <li>
               <a
                 href="#collaborations"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Joint Research Collaborations
               </a>
             </li>
           </ul>
-          <h3 className="font-semibold text-gray-900 mb-3 mt-4">
-            ECOSYSTEM BUILDING
+        </div>
+
+        {/* Column 3 - ECOSYSTEM BUILDING & SOCIAL IMPACT */}
+        <div>
+          <h3 className="font-semibold text-gray-900 mb-4 text-lg">
+            ECOSYSTEM BUILDING & SOCIAL IMPACT
           </h3>
-          <ul className="space-y-2">
+          <ul className="space-y-3">
             <li>
               <a
                 href="#social-good"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 AI for Social Good & Rural Outreach
@@ -102,30 +109,13 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) 
             <li>
               <a
                 href="#policy"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Liaising & Policy Engagement
               </a>
             </li>
           </ul>
-        </div>
-      </div>
-      <div className="mt-4 pt-4 border-t border-gray-100">
-        <div className="bg-blue-50 rounded-lg p-4">
-          <h4 className="font-medium text-gray-900 mb-2">
-            Together, we're building an AI-powered India.
-          </h4>
-          <p className="text-sm text-gray-600 mb-3">
-            Join the movement
-          </p>
-          <a
-            href="#register"
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 inline-block"
-            onClick={onClose}
-          >
-            Register Now
-          </a>
         </div>
       </div>
     </DropdownMenu>

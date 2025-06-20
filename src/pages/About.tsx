@@ -10,63 +10,85 @@ const About = () => {
     <main className="relative overflow-hidden bg-[#F6F6F6]">
       <Header />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10 pt-28">
-        {/* About Header */}
-        <div className="text-center flex flex-col items-center mb-12">
-          <div className="inline-block px-4 py-2 rounded-full bg-[#E5F5FC] text-[#005BA9] text-sm font-medium mb-4">
-            About Us
-          </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4 w-[700px]">
-            India’s Collaborative AI Ecosystem for Social Good, Research &
-            Innovation
-          </h1>
-        </div>
-        <div className="w-full">
+      <div className="relative w-full">
+        {/* Background Element - Now covers header to form */}
+        <div className="absolute top-0 left-0 w-full h-full z-0 opacity-35 pointer-events-none">
           <img
-            src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750244957/about_img_1_b5biqp.png"
-            alt="About CAiRL"
-            className="w-full h-auto object-cover rounded-2xl"
+            src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750381598/Element-1_tsbawm.png"
+            alt="Background Element"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"
           />
         </div>
-        {/* Our Journey Section */}
-        <div className="text-center flex flex-col items-center my-12 mt-24">
-          <div className="inline-block px-4 py-2 rounded-full bg-[#E5F5FC] text-[#005BA9] text-sm font-medium mb-4">
-            Our Journery
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-20 pt-28">
+          {/* About Header */}
+          <div className="text-center flex flex-col items-center mb-12">
+            <div className="inline-block px-4 py-2 rounded-full bg-[#E5F5FC] text-[#005BA9] text-sm font-medium mb-4">
+              About Us
+            </div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4 w-[700px]">
+              India’s Collaborative AI Ecosystem for Social Good, Research &
+              Innovation
+            </h1>
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-8 w-[700px]">
-            Bridging Innovation and Impact
-          </h1>
-          <p className="about-text text-justify w-full">
-            The Collaborative AI Research Labs Foundation (CAiRL) was founded
-            with a clear and focused mission: to harness the transformative
-            power of artificial intelligence (AI) to drive meaningful change
-            across industries and communities. Established in Hyderabad, India,
-            CAiRL serves as a hub for collaboration, innovation, and ethical
-            development in the AI space, uniting key stakeholders from academia,
-            industry, and government to address some of the world’s most
-            pressing challenges.
-          </p>
-          <p className="about-text text-justify w-full">
-            At CAiRL, we believe that AI has the potential to create a positive
-            societal impact when developed responsibly and inclusively. Our
-            foundation is committed to advancing AI technologies that are not
-            only cutting-edge but also scalable, ethical, and aligned with the
-            betterment of society. We work across a wide range of sectors
-            including healthcare, agriculture, biopharma, education, and more,
-            driving forward AI solutions that make a tangible difference in the
-            world.
-          </p>
+          <div className="w-full">
+            <img
+              src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750244957/about_img_1_b5biqp.png"
+              alt="About CAiRL"
+              className="w-full h-auto object-cover rounded-2xl"
+            />
+          </div>
+          {/* Our Journey Section */}
+          <div className="text-center flex flex-col items-center my-12 mt-24">
+            <div className="inline-block px-4 py-2 rounded-full bg-[#E5F5FC] text-[#005BA9] text-sm font-medium mb-4">
+              Our Journery
+            </div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-8 w-[700px]">
+              Bridging Innovation and Impact
+            </h1>
+            <p className="about-text text-justify w-full">
+              The Collaborative AI Research Labs Foundation (CAiRL) was founded
+              with a clear and focused mission: to harness the transformative
+              power of artificial intelligence (AI) to drive meaningful change
+              across industries and communities. Established in Hyderabad,
+              India, CAiRL serves as a hub for collaboration, innovation, and
+              ethical development in the AI space, uniting key stakeholders from
+              academia, industry, and government to address some of the world’s
+              most pressing challenges.
+            </p>
+            <p className="about-text text-justify w-full">
+              At CAiRL, we believe that AI has the potential to create a
+              positive societal impact when developed responsibly and
+              inclusively. Our foundation is committed to advancing AI
+              technologies that are not only cutting-edge but also scalable,
+              ethical, and aligned with the betterment of society. We work
+              across a wide range of sectors including healthcare, agriculture,
+              biopharma, education, and more, driving forward AI solutions that
+              make a tangible difference in the world.
+            </p>
+          </div>
         </div>
       </div>
 
       {/* Mission Section */}
       <Mission />
 
-      {/* Vision Section */}
-      <Vision />
+      <div className="relative w-full">
+        {/* Background Element - Now covers header to form */}
+        <div className="absolute top-0 left-0 w-full h-full z-0 opacity-35 pointer-events-none">
+          <img
+            src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750381712/Element-2_yonfix.png"
+            alt="Background Element"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover pt-8"
+          />
+        </div>
+        <div className="relative z-20">
+          {/* Vision Section */}
+          <Vision />
 
-      {/* Team Section */}
-      <Team />
+          {/* Team Section */}
+          <Team />
+        </div>
+      </div>
 
       {/* MOU Section */}
       <div className="relative bg-white pt-46 lg:pt-52 pb-10">

@@ -44,7 +44,7 @@ const Contact = () => {
     <main className="relative overflow-hidden bg-[#F6F6F6]">
       <Header />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10 pt-28">
+      <div className="relative w-full">
         {/* Background Element - Now covers header to form */}
         <div className="absolute top-0 left-0 w-full h-full z-0 opacity-25 pointer-events-none">
           <img
@@ -53,246 +53,253 @@ const Contact = () => {
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"
           />
         </div>
-        {/* Contact Header */}
-        <div className="text-center mb-12">
-          <div className="inline-block px-4 py-2 rounded-full bg-[#E5F5FC] text-[#005BA9] text-sm font-medium mb-4">
-            Contact
-          </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Get in Touch
-          </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Reach out to us for collaboration, inquiries, or to learn more about
-            our AI initiatives.
-          </p>
-        </div>
 
-        {/* Contact Form */}
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-16 max-w-4xl mx-auto relative overflow-hidden">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label
-                  htmlFor="fullName"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  Full Name*
-                </label>
-                <input
-                  type="text"
-                  id="fullName"
-                  name="fullName"
-                  value={formData.fullName}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="John"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  Email Address*
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="example@email.com"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="organization"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  Organization
-                </label>
-                <input
-                  type="text"
-                  id="organization"
-                  name="organization"
-                  value={formData.organization}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="ACME"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="linkedin"
-                  className="block text-sm font-medium text-gray-700 mb-1"
-                >
-                  LinkedIn Profile
-                </label>
-                <input
-                  type="text"
-                  id="linkedin"
-                  name="linkedin"
-                  value={formData.linkedin}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="linkedin.com/in/..."
-                />
-              </div>
-            </div>
-
-            <div>
-              <label
-                htmlFor="engagement"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Type of Engagement*
-              </label>
-              <div className="relative">
-                <select
-                  id="engagement"
-                  name="engagement"
-                  value={formData.engagement}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 appearance-none"
-                >
-                  <option value="" disabled>
-                    Select One
-                  </option>
-                  <option value="collaboration">Collaboration</option>
-                  <option value="inquiry">General Inquiry</option>
-                  <option value="partnership">Partnership</option>
-                  <option value="media">Media Inquiry</option>
-                  <option value="other">Other</option>
-                </select>
-                <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                  <svg
-                    className="fill-current h-4 w-4"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-gray-700 mb-1"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows={4}
-                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Tell us briefly about your interest"
-              />
-            </div>
-
-            <div>
-              <button
-                type="submit"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#005BA9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-              >
-                Submit
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 ml-2"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-          </form>
-        </div>
-        {/* Contact Info Cards */}
-        <section className="py-16 px-4 bg-transparent z-10" id="contact">
-          <div className="max-w-6xl mx-auto">
-            <a
-              href="#about-us"
-              className="bg-[#E5F5FC] text-[#005BA9] px-4 py-2 rounded-full"
-            >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10 pt-28">
+          {/* Contact Header */}
+          <div className="text-center mb-12">
+            <div className="inline-block px-4 py-2 rounded-full bg-[#E5F5FC] text-[#005BA9] text-sm font-medium mb-4">
               Contact
-            </a>
-            <div className="flex justify-between items-center mb-4 mt-8">
-              <div>
-                <h2 className="text-3xl font-bold text-gray-900">
-                  Connect with us
-                </h2>
-                <p className="text-sm text-gray-900">
-                  Have questions, ideas, or just want to connect?
-                </p>
-              </div>
-              <a
-                href="#all-events"
-                className="bg-[#005BA9] text-white hover:text-white px-4 py-2 rounded-full font-medium flex items-center"
-              >
-                Know more
-              </a>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {/* Phone */}
-              <div className="bg-gray-50 p-8 rounded-xl">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Phone className="text-blue-600 w-5 h-5" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
-                <p className="text-gray-700 mb-1">+91-9391335191</p>
-                <p className="text-gray-500 text-sm">
-                  Monday - Friday, 09:00 AM - 06:00PM
-                </p>
-              </div>
-
-              {/* Email */}
-              <div className="bg-gray-50 p-8 rounded-xl">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Mail className="text-blue-600 w-5 h-5" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
-                <p className="text-gray-700 mb-1">info@cairl.org</p>
-                <p className="text-gray-500 text-sm">
-                  We'll respond as soon as possible
-                </p>
-              </div>
-
-              {/* Location */}
-              <div className="bg-gray-50 p-8 rounded-xl">
-                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <MapPin className="text-blue-600 w-5 h-5" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  Location
-                </h3>
-                <p className="text-gray-700 mb-1">
-                  T-Hub, 2.0, Inorbit Mall Rd,
-                  <br />
-                  Vittal Rao Nagar, Madhapur,
-                  <br />
-                  Hyderabad, Telangana 500081
-                </p>
-              </div>
-            </div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Get in Touch
+            </h1>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Reach out to us for collaboration, inquiries, or to learn more
+              about our AI initiatives.
+            </p>
           </div>
-        </section>
+
+          {/* Contact Form */}
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 mb-16 max-w-4xl mx-auto relative overflow-hidden">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    htmlFor="fullName"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Full Name*
+                  </label>
+                  <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="John"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Email Address*
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="example@email.com"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="organization"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Organization
+                  </label>
+                  <input
+                    type="text"
+                    id="organization"
+                    name="organization"
+                    value={formData.organization}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="ACME"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="linkedin"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    LinkedIn Profile
+                  </label>
+                  <input
+                    type="text"
+                    id="linkedin"
+                    name="linkedin"
+                    value={formData.linkedin}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="linkedin.com/in/..."
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="engagement"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Type of Engagement*
+                </label>
+                <div className="relative">
+                  <select
+                    id="engagement"
+                    name="engagement"
+                    value={formData.engagement}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 appearance-none"
+                  >
+                    <option value="" disabled>
+                      Select One
+                    </option>
+                    <option value="collaboration">Collaboration</option>
+                    <option value="inquiry">General Inquiry</option>
+                    <option value="partnership">Partnership</option>
+                    <option value="media">Media Inquiry</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                    <svg
+                      className="fill-current h-4 w-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={4}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Tell us briefly about your interest"
+                />
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#005BA9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                  Submit
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 ml-2"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+          {/* Contact Info Cards */}
+          <section className="py-16 px-4 bg-transparent z-10" id="contact">
+            <div className="max-w-6xl mx-auto">
+              <a
+                href="#about-us"
+                className="bg-[#E5F5FC] text-[#005BA9] px-4 py-2 rounded-full"
+              >
+                Contact
+              </a>
+              <div className="flex justify-between items-center mb-4 mt-8">
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900">
+                    Connect with us
+                  </h2>
+                  <p className="text-sm text-gray-900">
+                    Have questions, ideas, or just want to connect?
+                  </p>
+                </div>
+                <a
+                  href="#all-events"
+                  className="bg-[#005BA9] text-white hover:text-white px-4 py-2 rounded-full font-medium flex items-center"
+                >
+                  Know more
+                </a>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                {/* Phone */}
+                <div className="bg-gray-50 p-8 rounded-xl">
+                  <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <Phone className="text-blue-600 w-5 h-5" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    Phone
+                  </h3>
+                  <p className="text-gray-700 mb-1">+91-9391335191</p>
+                  <p className="text-gray-500 text-sm">
+                    Monday - Friday, 09:00 AM - 06:00PM
+                  </p>
+                </div>
+
+                {/* Email */}
+                <div className="bg-gray-50 p-8 rounded-xl">
+                  <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <Mail className="text-blue-600 w-5 h-5" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    Email
+                  </h3>
+                  <p className="text-gray-700 mb-1">info@cairl.org</p>
+                  <p className="text-gray-500 text-sm">
+                    We'll respond as soon as possible
+                  </p>
+                </div>
+
+                {/* Location */}
+                <div className="bg-gray-50 p-8 rounded-xl">
+                  <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                    <MapPin className="text-blue-600 w-5 h-5" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    Location
+                  </h3>
+                  <p className="text-gray-700 mb-1">
+                    T-Hub, 2.0, Inorbit Mall Rd,
+                    <br />
+                    Vittal Rao Nagar, Madhapur,
+                    <br />
+                    Hyderabad, Telangana 500081
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
 
       {/* Map */}

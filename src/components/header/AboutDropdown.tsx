@@ -9,14 +9,17 @@ interface AboutDropdownProps {
 const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
   return (
     <DropdownMenu isOpen={isOpen} onClose={onClose}>
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-3 gap-8 p-6">
+        {/* Column 1 */}
         <div>
-          <h3 className="font-semibold text-gray-900 mb-3">WHO WE ARE</h3>
-          <ul className="space-y-2">
+          <h3 className="font-semibold text-gray-900 mb-4 text-lg">
+            WHO WE ARE
+          </h3>
+          <ul className="space-y-3">
             <li>
               <a
-                href="#mission"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                href="/about-us#mission"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Our Mission
@@ -24,8 +27,8 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
             </li>
             <li>
               <a
-                href="#vision"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                href="/about-us#vision"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Our Vision
@@ -33,8 +36,8 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
             </li>
             <li>
               <a
-                href="#objectives"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                href="/about-us#objectives"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Objectives
@@ -42,8 +45,8 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
             </li>
             <li>
               <a
-                href="#goals"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                href="/about-us#goals"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Goals
@@ -51,13 +54,17 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
             </li>
           </ul>
         </div>
+
+        {/* Column 2 */}
         <div>
-          <h3 className="font-semibold text-gray-900 mb-3">ADVISORY TEAM</h3>
-          <ul className="space-y-2">
+          <h3 className="font-semibold text-gray-900 mb-4 text-lg">
+            ADVISORY TEAM
+          </h3>
+          <ul className="space-y-3">
             <li>
               <a
-                href="#strategic-advisor"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                href="/about-us#strategic-advisor"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Strategic Advisor
@@ -65,8 +72,8 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
             </li>
             <li>
               <a
-                href="#academic-advisor"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                href="/about-us#academic-advisor"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Academic Advisor
@@ -74,8 +81,8 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
             </li>
             <li>
               <a
-                href="#industry-advisor"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                href="/about-us#industry-advisor"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Industry Advisor
@@ -83,43 +90,59 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
             </li>
             <li>
               <a
-                href="#technology-advisor"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                href="/about-us#technology-advisor"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Technology Advisor
               </a>
             </li>
           </ul>
-          <h3 className="font-semibold text-gray-900 mb-3 mt-4">OUR TEAM</h3>
-          <ul className="space-y-2">
+        </div>
+
+        {/* Column 3 */}
+        <div>
+          <h3 className="font-semibold text-gray-900 mb-4 text-lg">OUR TEAM</h3>
+          <ul className="space-y-3 mb-6">
             <li>
               <a
-                href="#board-members"
-                className="text-gray-600 hover:text-blue-600 text-sm block py-1"
+                href="/about-us#board-members"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
                 Board Members & Management Team
               </a>
             </li>
           </ul>
+
+          <h3 className="font-semibold text-gray-900 mb-4 text-lg">
+            MOUs & STRATEGIC PARTNERSHIPS
+          </h3>
+          <ul className="space-y-3 mb-6">
+            <li>
+              <a
+                href="/about-us#mou"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
+                onClick={onClose}
+              >
+                View All Partnerships
+              </a>
+            </li>
+          </ul>
+
+          <h3 className="font-semibold text-gray-900 mb-4 text-lg">FAQs</h3>
+          <ul className="space-y-3">
+            <li>
+              <a
+                href="/about-us#faqs"
+                className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
+                onClick={onClose}
+              >
+                Frequently Asked Questions
+              </a>
+            </li>
+          </ul>
         </div>
-      </div>
-      <div className="mt-4 pt-4 border-t border-gray-100">
-        <a
-          href="#mou"
-          className="text-gray-600 hover:text-blue-600 text-sm block py-1"
-          onClick={onClose}
-        >
-          MOUs & Strategic Partnerships
-        </a>
-        <a
-          href="#faqs"
-          className="text-gray-600 hover:text-blue-600 text-sm block py-1"
-          onClick={onClose}
-        >
-          FAQs
-        </a>
       </div>
     </DropdownMenu>
   );

@@ -2,7 +2,7 @@ import TeamSection from "./TeamSection";
 
 const Team = () => {
   return (
-    <div className="flex flex-col justify-center items-center mb-16">
+    <div className="flex flex-col justify-center items-center mb-16 z-10">
       {/* Vision Header */}
       <div className="inline-block px-4 py-2 rounded-full bg-[#E5F5FC] text-[#005BA9] text-sm font-medium mb-4">
         Advisory Team
