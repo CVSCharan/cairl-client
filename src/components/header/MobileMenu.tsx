@@ -523,7 +523,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
 
         {/* Mobile Contact */}
         <Link
-          to="/contact"
+          to="/contact-us"
           className="block text-gray-700 hover:text-blue-600 text-sm font-medium py-2"
           onClick={onClose}
         >
