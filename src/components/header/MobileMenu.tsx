@@ -95,29 +95,47 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                       Academic Advisor
                     </a>
                   </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-semibold text-gray-900 text-xs mb-2">
-                  OUR TEAM
-                </h3>
-                <ul className="space-y-2">
                   <li>
                     <a
-                      href="#team"
+                      href="/about-us#industry-advisors"
                       className="text-gray-600 hover:text-blue-600 text-xs block py-1"
                       onClick={onClose}
                     >
-                      Meet the Team
+                      Industry Advisor
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#careers"
+                      href="/about-us#technology-advisors"
                       className="text-gray-600 hover:text-blue-600 text-xs block py-1"
                       onClick={onClose}
                     >
-                      Careers
+                      Technology Advisor
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 text-xs mb-2">
+                  ADVISORY TEAM
+                </h3>
+                <ul className="space-y-2">
+                  <li>
+                    <a
+                      href="/about-us#strategic-advisors"
+                      className="text-gray-600 hover:text-blue-600 text-xs block py-1"
+                      onClick={onClose}
+                    >
+                      Strategic Advisor
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/about-us#academic-advisor"
+                      className="text-gray-600 hover:text-blue-600 text-xs block py-1"
+                      onClick={onClose}
+                    >
+                      Academic Advisor
                     </a>
                   </li>
                 </ul>
