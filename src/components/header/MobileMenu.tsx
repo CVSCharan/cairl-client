@@ -37,7 +37,8 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
             </svg>
           </button>
           {activeDropdown === "mobile-about" && (
-            <div className="pl-4 mt-2 space-y-3">
+            <div className="pl-4 mt-2 space-y-4">
+              {/* WHO WE ARE */}
               <div>
                 <h3 className="font-semibold text-gray-900 text-xs mb-2">
                   WHO WE ARE
@@ -45,33 +46,44 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="#about"
+                      href="/about-us#mission"
                       className="text-gray-600 hover:text-blue-600 text-xs block py-1"
                       onClick={onClose}
                     >
-                      About CAiRL
+                      Our Mission
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#mission"
+                      href="/about-us#vision"
                       className="text-gray-600 hover:text-blue-600 text-xs block py-1"
                       onClick={onClose}
                     >
-                      Mission & Vision
+                      Our Vision
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#values"
+                      href="/about-us#objectives"
                       className="text-gray-600 hover:text-blue-600 text-xs block py-1"
                       onClick={onClose}
                     >
-                      Our Values
+                      Objectives
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/about-us#goals"
+                      className="text-gray-600 hover:text-blue-600 text-xs block py-1"
+                      onClick={onClose}
+                    >
+                      Goals
                     </a>
                   </li>
                 </ul>
               </div>
+
+              {/* ADVISORY TEAM */}
               <div>
                 <h3 className="font-semibold text-gray-900 text-xs mb-2">
                   ADVISORY TEAM
@@ -88,7 +100,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                   </li>
                   <li>
                     <a
-                      href="/about-us#academic-advisor"
+                      href="/about-us#academic-advisors"
                       className="text-gray-600 hover:text-blue-600 text-xs block py-1"
                       onClick={onClose}
                     >
@@ -115,36 +127,56 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                   </li>
                 </ul>
               </div>
+
+              {/* OUR TEAM */}
               <div>
                 <h3 className="font-semibold text-gray-900 text-xs mb-2">
-                  ADVISORY TEAM
+                  OUR TEAM
                 </h3>
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="/about-us#strategic-advisors"
+                      href="/about-us#board-members"
                       className="text-gray-600 hover:text-blue-600 text-xs block py-1"
                       onClick={onClose}
                     >
-                      Strategic Advisor
+                      Board Members & Management Team
                     </a>
                   </li>
+                </ul>
+              </div>
+
+              {/* MOUs & STRATEGIC PARTNERSHIPS */}
+              <div>
+                <h3 className="font-semibold text-gray-900 text-xs mb-2">
+                  MOUs & STRATEGIC PARTNERSHIPS
+                </h3>
+                <ul className="space-y-2">
                   <li>
                     <a
-                      href="/about-us#academic-advisors"
+                      href="/about-us#mou"
                       className="text-gray-600 hover:text-blue-600 text-xs block py-1"
                       onClick={onClose}
                     >
-                      Academic Advisor
+                      View All Partnerships
                     </a>
                   </li>
+                </ul>
+              </div>
+
+              {/* FAQs */}
+              <div>
+                <h3 className="font-semibold text-gray-900 text-xs mb-2">
+                  FAQs
+                </h3>
+                <ul className="space-y-2">
                   <li>
                     <a
-                      href="/about-us#technology-advisors"
+                      href="/about-us#faqs"
                       className="text-gray-600 hover:text-blue-600 text-xs block py-1"
                       onClick={onClose}
                     >
-                      Technology Advisor
+                      Frequently Asked Questions
                     </a>
                   </li>
                 </ul>
@@ -377,39 +409,88 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
             </svg>
           </button>
           {activeDropdown === "mobile-happenings" && (
-            <div className="pl-4 mt-2 space-y-3">
-              <h3 className="font-semibold text-gray-900 text-xs mb-2">
-                HAPPENINGS
-              </h3>
-              <ul className="space-y-2">
-                <li>
-                  <a
-                    href="#events"
-                    className="text-gray-600 hover:text-blue-600 text-xs block py-1"
-                    onClick={onClose}
-                  >
-                    Events
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#webinars"
-                    className="text-gray-600 hover:text-blue-600 text-xs block py-1"
-                    onClick={onClose}
-                  >
-                    Webinars
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#visual-journey"
-                    className="text-gray-600 hover:text-blue-600 text-xs block py-1"
-                    onClick={onClose}
-                  >
-                    Visual Journey
-                  </a>
-                </li>
-              </ul>
+            <div className="pl-4 mt-2 space-y-4">
+              {/* HAPPENINGS */}
+              <div>
+                <h3 className="font-semibold text-gray-900 text-xs mb-2">
+                  HAPPENINGS
+                </h3>
+                <ul className="space-y-2">
+                  <li>
+                    <a
+                      href="/happenings#events"
+                      className="text-gray-600 hover:text-blue-600 text-xs block py-1"
+                      onClick={onClose}
+                    >
+                      Events
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/happenings#webinars"
+                      className="text-gray-600 hover:text-blue-600 text-xs block py-1"
+                      onClick={onClose}
+                    >
+                      Webinars
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/happenings#visual-journey"
+                      className="text-gray-600 hover:text-blue-600 text-xs block py-1"
+                      onClick={onClose}
+                    >
+                      Visual Journey
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* UPCOMING EVENT */}
+              <div>
+                <h3 className="font-semibold text-gray-900 text-xs mb-2">
+                  UPCOMING EVENT
+                </h3>
+                <div className="bg-gray-100 rounded-lg w-full h-24 mb-2 flex items-center justify-center">
+                  <span className="text-gray-400 text-xs">Event Image</span>
+                </div>
+                <h4 className="text-xs font-medium text-gray-900 mb-1">
+                  Join us for an exciting day of coding, collaboration, and
+                  innovation!
+                </h4>
+                <p className="text-xs text-gray-500 mb-1">
+                  Monday, 15 April 2025
+                </p>
+                <p className="text-xs text-gray-500 mb-2">
+                  09:00 AM - 01:00 PM
+                </p>
+                <button className="w-full bg-blue-600 text-white px-3 py-1.5 rounded-lg text-xs font-medium hover:bg-blue-700">
+                  Register
+                </button>
+              </div>
+
+              {/* UPCOMING WEBINAR */}
+              <div>
+                <h3 className="font-semibold text-gray-900 text-xs mb-2">
+                  UPCOMING WEBINAR
+                </h3>
+                <div className="bg-gray-100 rounded-lg w-full h-24 mb-2 flex items-center justify-center">
+                  <span className="text-gray-400 text-xs">Webinar Image</span>
+                </div>
+                <h4 className="text-xs font-medium text-gray-900 mb-1">
+                  Join us for an exciting day of coding, collaboration, and
+                  innovation!
+                </h4>
+                <p className="text-xs text-gray-500 mb-1">
+                  Monday, 15 April 2025
+                </p>
+                <p className="text-xs text-gray-500 mb-2">
+                  09:00 AM - 01:00 PM
+                </p>
+                <button className="w-full bg-blue-600 text-white px-3 py-1.5 rounded-lg text-xs font-medium hover:bg-blue-700">
+                  Register
+                </button>
+              </div>
             </div>
           )}
         </div>
