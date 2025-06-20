@@ -1,5 +1,6 @@
 import React from "react";
 import type { MobileMenuProps } from "../../types/header";
+import { Link } from "react-router-dom";
 
 const MobileMenu: React.FC<MobileMenuProps> = ({
   isOpen,
@@ -10,7 +11,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="md:hidden">
+    <div className="md:hidden px-2">
       <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
         {/* Mobile About Dropdown */}
         <div>
@@ -521,22 +522,22 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
         </div>
 
         {/* Mobile Contact */}
-        <a
-          href="#contact"
+        <Link
+          to="/contact"
           className="block text-gray-700 hover:text-blue-600 text-sm font-medium py-2"
           onClick={onClose}
         >
           Contact
-        </a>
+        </Link>
 
         {/* CTA Button - Mobile */}
-        <a
-          href="#contact"
+        <Link
+          to="/engage-with-us"
           className="block bg-[#005BA9] text-white text-center px-5 py-3 rounded-full text-sm font-medium hover:bg-blue-700 transition-colors mt-4"
           onClick={onClose}
         >
           Engage with us
-        </a>
+        </Link>
       </div>
     </div>
   );
