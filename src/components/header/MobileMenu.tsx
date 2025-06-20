@@ -79,20 +79,20 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                 <ul className="space-y-2">
                   <li>
                     <a
-                      href="#advisory"
+                      href="/about-us#strategic-advisors"
                       className="text-gray-600 hover:text-blue-600 text-xs block py-1"
                       onClick={onClose}
                     >
-                      Advisory Board
+                      Strategic Advisor
                     </a>
                   </li>
                   <li>
                     <a
-                      href="#advisors"
+                      href="/about-us#academic-advisor"
                       className="text-gray-600 hover:text-blue-600 text-xs block py-1"
                       onClick={onClose}
                     >
-                      Meet Our Advisors
+                      Academic Advisor
                     </a>
                   </li>
                 </ul>
