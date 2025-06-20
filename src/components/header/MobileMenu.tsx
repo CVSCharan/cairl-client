@@ -131,11 +131,20 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                   </li>
                   <li>
                     <a
-                      href="/about-us#academic-advisor"
+                      href="/about-us#academic-advisors"
                       className="text-gray-600 hover:text-blue-600 text-xs block py-1"
                       onClick={onClose}
                     >
                       Academic Advisor
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/about-us#technology-advisors"
+                      className="text-gray-600 hover:text-blue-600 text-xs block py-1"
+                      onClick={onClose}
+                    >
+                      Technology Advisor
                     </a>
                   </li>
                 </ul>

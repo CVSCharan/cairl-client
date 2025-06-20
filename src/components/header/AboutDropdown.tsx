@@ -72,7 +72,7 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
             </li>
             <li>
               <a
-                href="/about-us#academic-advisor"
+                href="/about-us#academic-advisors"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
