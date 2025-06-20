@@ -1,6 +1,32 @@
+import { useEffect } from "react";
 import TeamSection from "./TeamSection";
 
 const Team = () => {
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (window.location.hash) {
+      // Remove the '#' from the hash
+      const elementId = window.location.hash.substring(1);
+      // Find the element by ID
+      const element = document.getElementById(elementId);
+
+      if (element) {
+        // Smooth scroll to the element
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+
+        // Update URL without jumping (optional)
+        window.history.replaceState(
+          null,
+          "",
+          window.location.pathname + window.location.hash
+        );
+      }
+    }
+  }, []); // Empty dependency array means this runs once on mount
+
   return (
     <section className="flex flex-col justify-center items-center mb-16 z-20">
       {/* Vision Header */}
