@@ -149,7 +149,7 @@ const Bootcamps = () => {
   return (
     <main className="min-h-screen bg-[#F6F6F6] flex flex-col">
       <Header />
-      <section className="max-w-7xl mx-auto relative z-10 pt-28">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10 pt-28">
         {/* Page Heading */}
         <div className="text-center mb-12">
           <h4 className="inline-block bg-[#E5F5FC] text-[#005BA9] px-4 py-2 rounded-full mb-4">

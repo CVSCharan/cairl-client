@@ -1,5 +1,5 @@
-import React from 'react';
-import DropdownMenu from './DropdownMenu';
+import React from "react";
+import DropdownMenu from "./DropdownMenu";
 
 interface AboutDropdownProps {
   isOpen: boolean;
@@ -8,12 +8,10 @@ interface AboutDropdownProps {
 
 const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
   return (
-    <DropdownMenu isOpen={isOpen}>
+    <DropdownMenu isOpen={isOpen} onClose={onClose}>
       <div className="grid grid-cols-2 gap-6">
         <div>
-          <h3 className="font-semibold text-gray-900 mb-3">
-            WHO WE ARE
-          </h3>
+          <h3 className="font-semibold text-gray-900 mb-3">WHO WE ARE</h3>
           <ul className="space-y-2">
             <li>
               <a
@@ -54,9 +52,7 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
           </ul>
         </div>
         <div>
-          <h3 className="font-semibold text-gray-900 mb-3">
-            ADVISORY TEAM
-          </h3>
+          <h3 className="font-semibold text-gray-900 mb-3">ADVISORY TEAM</h3>
           <ul className="space-y-2">
             <li>
               <a
@@ -95,9 +91,7 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
               </a>
             </li>
           </ul>
-          <h3 className="font-semibold text-gray-900 mb-3 mt-4">
-            OUR TEAM
-          </h3>
+          <h3 className="font-semibold text-gray-900 mb-3 mt-4">OUR TEAM</h3>
           <ul className="space-y-2">
             <li>
               <a

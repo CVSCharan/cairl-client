@@ -1,5 +1,5 @@
-import React from 'react';
-import { DropdownMenuProps } from './types';
+import React from "react";
+import type { DropdownMenuProps } from "../../types/header";
 
 const DropdownMenu: React.FC<DropdownMenuProps> = ({ isOpen, children }) => {
   if (!isOpen) return null;

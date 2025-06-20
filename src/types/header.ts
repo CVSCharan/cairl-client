@@ -10,7 +10,7 @@ export interface DropdownSection {
 }
 
 export interface DropdownButtonProps {
-  label: string;
+  children: React.ReactNode;
   isActive: boolean;
   onClick: () => void;
 }
@@ -25,4 +25,11 @@ export interface NavigationItem {
   id: string;
   label: string;
   component: React.ComponentType<{ isOpen: boolean; onClose: () => void }>;
+}
+
+export interface MobileMenuProps {
+  isOpen: boolean;
+  activeDropdown: string | null;
+  onDropdownToggle: (dropdownName: string) => void;
+  onClose: () => void;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { Phone, Mail, MapPin } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -46,7 +46,7 @@ const Contact = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10 pt-28">
         {/* Background Element - Now covers header to form */}
-        <div className="absolute top-0 left-0 w-full h-full z-0 opacity-20 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full z-0 opacity-25 pointer-events-none">
           <img
             src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750188690/Element_hvtzp4.png"
             alt="Background Element"
@@ -204,7 +204,7 @@ const Contact = () => {
             <div>
               <button
                 type="submit"
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#005BA9] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
               >
                 Submit
                 <svg
@@ -224,58 +224,75 @@ const Contact = () => {
           </form>
         </div>
         {/* Contact Info Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          {/* Card Template */}
-          {[
-            {
-              icon: <FaPhone className="text-white" />,
-              title: "Phone",
-              value: "+91-9391335191",
-              link: "tel:+919391335191",
-              subtitle: "Monday - Friday, 09:00 AM - 06:00PM",
-            },
-            {
-              icon: <FaEnvelope className="text-white" />,
-              title: "Email",
-              value: "info@cairl.org",
-              link: "mailto:info@cairl.org",
-              subtitle: "We'll respond as soon as possible",
-            },
-            {
-              icon: <FaMapMarkerAlt className="text-white" />,
-              title: "Location",
-              value: "T-Hub, 2.0, Inorbit Mall Rd, Hyderabad, Telangana, India",
-              subtitle: "IIIT-H Foundation",
-            },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl p-6 shadow-md border border-gray-100 flex items-start gap-4"
+        <section className="py-16 px-4 bg-transparent z-10" id="contact">
+          <div className="max-w-6xl mx-auto">
+            <a
+              href="#about-us"
+              className="bg-[#E5F5FC] text-[#005BA9] px-4 py-2 rounded-full"
             >
-              <div className="w-12 h-12 min-w-12 flex items-center justify-center bg-[#005BA9] rounded-full">
-                {item.icon}
+              Contact
+            </a>
+            <div className="flex justify-between items-center mb-4 mt-8">
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900">
+                  Connect with us
+                </h2>
+                <p className="text-sm text-gray-900">
+                  Have questions, ideas, or just want to connect?
+                </p>
               </div>
-              <div className="flex-1">
-                <h3 className="text-base font-semibold text-gray-900 mb-1">
-                  {item.title}
+              <a
+                href="#all-events"
+                className="bg-[#005BA9] text-white hover:text-white px-4 py-2 rounded-full font-medium flex items-center"
+              >
+                Know more
+              </a>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              {/* Phone */}
+              <div className="bg-gray-50 p-8 rounded-xl">
+                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <Phone className="text-blue-600 w-5 h-5" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
+                <p className="text-gray-700 mb-1">+91-9391335191</p>
+                <p className="text-gray-500 text-sm">
+                  Monday - Friday, 09:00 AM - 06:00PM
+                </p>
+              </div>
+
+              {/* Email */}
+              <div className="bg-gray-50 p-8 rounded-xl">
+                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <Mail className="text-blue-600 w-5 h-5" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
+                <p className="text-gray-700 mb-1">info@cairl.org</p>
+                <p className="text-gray-500 text-sm">
+                  We'll respond as soon as possible
+                </p>
+              </div>
+
+              {/* Location */}
+              <div className="bg-gray-50 p-8 rounded-xl">
+                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <MapPin className="text-blue-600 w-5 h-5" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Location
                 </h3>
-                {item.link ? (
-                  <a
-                    href={item.link}
-                    className="text-[#005BA9] hover:underline block"
-                  >
-                    {item.value}
-                  </a>
-                ) : (
-                  <p className="text-gray-600">{item.value}</p>
-                )}
-                {item.subtitle && (
-                  <p className="text-sm text-gray-500">{item.subtitle}</p>
-                )}
+                <p className="text-gray-700 mb-1">
+                  T-Hub, 2.0, Inorbit Mall Rd,
+                  <br />
+                  Vittal Rao Nagar, Madhapur,
+                  <br />
+                  Hyderabad, Telangana 500081
+                </p>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        </section>
       </div>
 
       {/* Map */}

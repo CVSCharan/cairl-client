@@ -8,7 +8,7 @@ interface ServicesDropdownProps {
 
 const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) => {
   return (
-    <DropdownMenu isOpen={isOpen}>
+    <DropdownMenu isOpen={isOpen} onClose={onClose}>
       <div className="grid grid-cols-2 gap-6">
         <div>
           <h3 className="font-semibold text-gray-900 mb-3">

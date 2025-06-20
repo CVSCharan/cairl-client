@@ -84,7 +84,7 @@ const Header: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => handleDropdownToggle("about")}
-                className={`px-3 py-2 text-sm font-medium rounded-full flex items-center ${
+                className={`px-2 py-2 text-sm font-medium rounded-full flex items-center ${
                   activeDropdown === "about"
                     ? "text-blue-600 bg-blue-50"
                     : "text-gray-700 hover:text-blue-600 hover:bg-blue-50"
