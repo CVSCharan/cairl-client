@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useEffect } from "react";
 
 const Engage = () => {
   const membershipPlans = [
@@ -44,6 +45,18 @@ const Engage = () => {
       ],
     },
   ];
+
+  useEffect(() => {
+    // Force scroll to top on component mount
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth", // "smooth" for animation
+    });
+
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, []);
 
   return (
     <main className="relative overflow-hidden bg-[#F6F6F6]">
