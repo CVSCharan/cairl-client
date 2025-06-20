@@ -1,6 +1,9 @@
 const Vision = () => {
   return (
-    <section className="relative bg-transparent text-center flex flex-col items-center mb-12 pt-10 z-20">
+    <section
+      id="vision"
+      className="relative bg-transparent text-center flex flex-col items-center mb-12 pt-10"
+    >
       {/* Top wavy border */}
       <div className="absolute top-0 left-0 right-0 w-full h-12 overflow-hidden">
         <img

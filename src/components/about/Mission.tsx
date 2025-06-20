@@ -1,6 +1,6 @@
 const Mission = () => {
   return (
-    <div className="relative bg-white">
+    <section id="mission" className="relative bg-white">
       {/* Top wavy border */}
       <div className="absolute top-0 left-0 right-0 w-full h-12 overflow-hidden">
         <img
@@ -84,7 +84,7 @@ const Mission = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

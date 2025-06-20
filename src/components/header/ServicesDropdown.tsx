@@ -1,12 +1,15 @@
-import React from 'react';
-import DropdownMenu from './DropdownMenu';
+import React from "react";
+import DropdownMenu from "./DropdownMenu";
 
 interface ServicesDropdownProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) => {
+const ServicesDropdown: React.FC<ServicesDropdownProps> = ({
+  isOpen,
+  onClose,
+}) => {
   return (
     <DropdownMenu isOpen={isOpen} onClose={onClose}>
       <div className="grid grid-cols-3 gap-8 p-6">
@@ -18,7 +21,7 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) 
           <ul className="space-y-3">
             <li>
               <a
-                href="#bootcamps"
+                href="/services#knowledge-empowerment"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
@@ -27,7 +30,7 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) 
             </li>
             <li>
               <a
-                href="#workshops"
+                href="/services#knowledge-empowerment"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
@@ -36,7 +39,7 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) 
             </li>
             <li>
               <a
-                href="#excellence"
+                href="/services#knowledge-empowerment"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
@@ -45,7 +48,7 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) 
             </li>
             <li>
               <a
-                href="#conferences"
+                href="/services#knowledge-empowerment"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
@@ -63,7 +66,7 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) 
           <ul className="space-y-3">
             <li>
               <a
-                href="#hackathons"
+                href="/services#knowledge-empowerment"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
@@ -72,7 +75,7 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) 
             </li>
             <li>
               <a
-                href="#incubators"
+                href="/services#innovation"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
@@ -81,7 +84,7 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) 
             </li>
             <li>
               <a
-                href="#collaborations"
+                href="/services#innovation"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
@@ -99,7 +102,7 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) 
           <ul className="space-y-3">
             <li>
               <a
-                href="#social-good"
+                href="/services#eco-system"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
@@ -108,7 +111,7 @@ const ServicesDropdown: React.FC<ServicesDropdownProps> = ({ isOpen, onClose }) 
             </li>
             <li>
               <a
-                href="#policy"
+                href="#/services#eco-system"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >

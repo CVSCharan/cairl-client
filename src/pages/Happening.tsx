@@ -1,7 +1,33 @@
+import { useEffect } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 const Happening = () => {
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (window.location.hash) {
+      // Remove the '#' from the hash
+      const elementId = window.location.hash.substring(1);
+      // Find the element by ID
+      const element = document.getElementById(elementId);
+
+      if (element) {
+        // Smooth scroll to the element
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+
+        // Update URL without jumping (optional)
+        window.history.replaceState(
+          null,
+          "",
+          window.location.pathname + window.location.hash
+        );
+      }
+    }
+  }, []); // Empty dependency array means this runs once on mount
+
   return (
     <main className="min-h-screen bg-transparent flex flex-col">
       <Header />
@@ -26,7 +52,10 @@ const Happening = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Events Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+        <div
+          id="events"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20"
+        >
           <div>
             <h2 className="text-3xl font-bold text-[#005BA9] mb-6">Events</h2>
             <p className="text-gray-700 mb-6">
@@ -79,7 +108,10 @@ const Happening = () => {
         </div>
 
         {/* Webinars Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+        <div
+          id="webinars"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20"
+        >
           <div className="order-last lg:order-first rounded-xl h-full min-h-[300px] overflow-hidden">
             <img
               src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750262924/happenings-webinar-card-img_othucx.jpg"
@@ -130,7 +162,10 @@ const Happening = () => {
         </div>
 
         {/* Visual Journey Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div
+          id="visual-journey"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+        >
           <div>
             <h2 className="text-3xl font-bold text-[#005BA9] mb-6">
               Visual Journey

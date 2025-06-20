@@ -19,7 +19,7 @@ const ResearchDropdown: React.FC<ResearchDropdownProps> = ({
         <ul className="space-y-3">
           <li>
             <a
-              href="#ai-research"
+              href="/research-innovation#leadership"
               className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
               onClick={onClose}
             >
@@ -28,7 +28,7 @@ const ResearchDropdown: React.FC<ResearchDropdownProps> = ({
           </li>
           <li>
             <a
-              href="#ai-education"
+              href="/research-innovation#skill-development"
               className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
               onClick={onClose}
             >
@@ -37,7 +37,7 @@ const ResearchDropdown: React.FC<ResearchDropdownProps> = ({
           </li>
           <li>
             <a
-              href="#ecosystem"
+              href="/research-innovation#patnerships"
               className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
               onClick={onClose}
             >
@@ -46,7 +46,7 @@ const ResearchDropdown: React.FC<ResearchDropdownProps> = ({
           </li>
           <li>
             <a
-              href="#hackathons-innovation"
+              href="/research-innovation#hackathons"
               className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
               onClick={onClose}
             >
@@ -55,7 +55,7 @@ const ResearchDropdown: React.FC<ResearchDropdownProps> = ({
           </li>
           <li>
             <a
-              href="#sustainability"
+              href="/research-innovation#sustainability"
               className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
               onClick={onClose}
             >
@@ -64,7 +64,7 @@ const ResearchDropdown: React.FC<ResearchDropdownProps> = ({
           </li>
           <li>
             <a
-              href="#mentorship"
+              href="/research-innovation#mentorship"
               className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
               onClick={onClose}
             >

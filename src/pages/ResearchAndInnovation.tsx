@@ -1,7 +1,33 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { useEffect } from "react";
 
 const ResearchAndInnovation = () => {
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (window.location.hash) {
+      // Remove the '#' from the hash
+      const elementId = window.location.hash.substring(1);
+      // Find the element by ID
+      const element = document.getElementById(elementId);
+
+      if (element) {
+        // Smooth scroll to the element
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+
+        // Update URL without jumping (optional)
+        window.history.replaceState(
+          null,
+          "",
+          window.location.pathname + window.location.hash
+        );
+      }
+    }
+  }, []); // Empty dependency array means this runs once on mount
+
   return (
     <main className="min-h-screen bg-transparent flex flex-col">
       <Header />
@@ -27,6 +53,7 @@ const ResearchAndInnovation = () => {
         {/* Section Template */}
         {[
           {
+            id: "leadership",
             title: "AI Research & Thought Leadership",
             description:
               "We curate high-stakes AI hackathons that push the boundaries of problem-solving. Our hackathons:",
@@ -39,9 +66,10 @@ const ResearchAndInnovation = () => {
               "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750324894/research-innovation-img-9_kcezsa.jpg",
           },
           {
+            id: "skill-development",
             title: "AI Education & Skill Development",
             description:
-              "AI’s power lies in people who understand and build it. That’s why CAiRL is shaping the next generation of AI innovators through:",
+              "AI's power lies in people who understand and build it. That's why CAiRL is shaping the next generation of AI innovators through:",
             bullets: [
               "AI Bootcamps & Upskilling Programs – Equipping professionals and students with AI expertise.",
               "AI Curriculum Development – Designing AI learning modules for universities & enterprises.",
@@ -51,6 +79,7 @@ const ResearchAndInnovation = () => {
               "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750324784/research-innovation-img-8_rtb9vs.jpg",
           },
           {
+            id: "patnerships",
             title: "AI Ecosystem Building & Partnerships",
             description:
               "AI progress thrives on collaboration. CAiRL bridges the gap between:",
@@ -63,9 +92,10 @@ const ResearchAndInnovation = () => {
               "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750323466/research-innovation-img-2_rg2tqt.jpg",
           },
           {
+            id: "hackathons",
             title: "AI Hackathons & Innovation Challenges",
             description:
-              "We don’t just discuss AI—we build it. CAiRL’s hackathons are where:",
+              "We don't just discuss AI—we build it. CAiRL's hackathons are where:",
             bullets: [
               "Top AI talent solves real-world challenges in healthtech, finance, and sustainability.",
               "Winning solutions receive funding, mentorship, and enterprise partnerships.",
@@ -75,6 +105,7 @@ const ResearchAndInnovation = () => {
               "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750323466/research-innovation-img-3_n0qba0.jpg",
           },
           {
+            id: "sustainability",
             title: "AI for Social Good & Sustainability",
             description:
               "AI should not just drive profits—it should drive positive change. CAiRL leads AI initiatives for:",
@@ -87,6 +118,7 @@ const ResearchAndInnovation = () => {
               "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750324458/research-innovation-img-7_zlyfwb.jpg",
           },
           {
+            id: "mentorship",
             title: "AI Mentorship & Startup Support",
             description:
               "We nurture the AI disruptors of tomorrow by offering:",
@@ -101,6 +133,7 @@ const ResearchAndInnovation = () => {
         ].map((section, idx) => (
           <div
             key={idx}
+            id={section.id} // Added ID here for anchor linking
             className={`flex flex-col items-center lg:items-start ${
               idx % 2 !== 0 ? "lg:flex-row-reverse" : "lg:flex-row"
             } gap-12`}

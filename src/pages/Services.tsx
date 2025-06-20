@@ -1,8 +1,34 @@
+import { useEffect } from "react";
 import CTA from "../components/CTA";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
 const Services = () => {
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (window.location.hash) {
+      // Remove the '#' from the hash
+      const elementId = window.location.hash.substring(1);
+      // Find the element by ID
+      const element = document.getElementById(elementId);
+
+      if (element) {
+        // Smooth scroll to the element
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+
+        // Update URL without jumping (optional)
+        window.history.replaceState(
+          null,
+          "",
+          window.location.pathname + window.location.hash
+        );
+      }
+    }
+  }, []); // Empty dependency array means this runs once on mount
+
   return (
     <main className="relative overflow-hidden bg-[#F6F6F6]">
       <Header />
@@ -29,7 +55,7 @@ const Services = () => {
         {/* Services Section */}
         <section className="space-y-20 mt-24">
           {/* Capacity Building & Knowledge Empowerment */}
-          <div>
+          <div id="knowledge-empowerment">
             <h2 className="text-2xl md:text-3xl font-bold text-[#002D3C] mb-10 text-center">
               Capacity Building & Knowledge Empowerment
             </h2>
@@ -71,7 +97,7 @@ const Services = () => {
           </div>
 
           {/* Innovation & Startup Support */}
-          <div>
+          <div id="innovation">
             <h2 className="text-2xl md:text-3xl font-bold text-[#002D3C] mb-10 text-center">
               Innovation & Startup Support
             </h2>
@@ -107,7 +133,7 @@ const Services = () => {
           </div>
 
           {/* Ecosystem Building & Social Impact */}
-          <div>
+          <div id="eco-system">
             <h2 className="text-2xl md:text-3xl font-bold text-[#002D3C] mb-10 text-center">
               Ecosystem Building & Social Impact
             </h2>

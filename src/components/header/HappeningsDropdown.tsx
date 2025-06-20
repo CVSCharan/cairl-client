@@ -23,7 +23,7 @@ const HappeningsDropdown: React.FC<HappeningsDropdownProps> = ({
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#events"
+                  href="/happenings#events"
                   className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                   onClick={onClose}
                 >
@@ -32,7 +32,7 @@ const HappeningsDropdown: React.FC<HappeningsDropdownProps> = ({
               </li>
               <li>
                 <a
-                  href="#webinars"
+                  href="/happenings#webinars"
                   className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                   onClick={onClose}
                 >
@@ -41,7 +41,7 @@ const HappeningsDropdown: React.FC<HappeningsDropdownProps> = ({
               </li>
               <li>
                 <a
-                  href="#visual-journey"
+                  href="/happenings#visual-journey"
                   className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                   onClick={onClose}
                 >

@@ -63,7 +63,7 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
           <ul className="space-y-3">
             <li>
               <a
-                href="/about-us#strategic-advisor"
+                href="/about-us#strategic-advisors"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
@@ -81,7 +81,7 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
             </li>
             <li>
               <a
-                href="/about-us#industry-advisor"
+                href="/about-us#industry-advisors"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
@@ -90,7 +90,7 @@ const AboutDropdown: React.FC<AboutDropdownProps> = ({ isOpen, onClose }) => {
             </li>
             <li>
               <a
-                href="/about-us#technology-advisor"
+                href="/about-us#technology-advisors"
                 className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                 onClick={onClose}
               >
