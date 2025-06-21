@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Feature Cards - Reduced Size */}
-        <div className="absolute -bottom-8 -right-5 z-30 flex flex-col space-y-3 w-72">
+        <div className="absolute -bottom-10 -right-3 z-30 flex flex-col space-y-3 w-72">
           {featureCards.map((card, index) => (
             <div
               key={index}

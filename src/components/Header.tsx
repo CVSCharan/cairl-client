@@ -12,7 +12,7 @@ import MobileMenu from "./header/MobileMenu";
 const Header: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+
   const headerRef = useRef<HTMLDivElement>(null);
 
   // Close dropdowns when clicking outside
@@ -33,18 +33,6 @@ const Header: React.FC = () => {
     };
   }, []);
 
-  // Handle scroll effect
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      setIsScrolled(scrollTop > 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const handleDropdownToggle = (dropdownName: string) => {
     setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
   };
@@ -62,16 +50,10 @@ const Header: React.FC = () => {
   return (
     <header
       ref={headerRef}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white shadow-md py-0" : "bg-transparent py-4"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent py-3"
     >
       <div className="container mx-auto px-2 sm:px-3 lg:px-4">
-        <div
-          className={`bg-white rounded-full shadow-sm py-3 px-6 flex items-center justify-between ${
-            isScrolled ? "border border-gray-100" : "shadow-md"
-          }`}
-        >
+        <div className="bg-white rounded-full shadow-sm py-3 px-4 flex items-center justify-between border border-gray-100">
           {/* Logo */}
           <div className="flex-shrink-0 mr-4">
             <Link
@@ -186,7 +168,7 @@ const Header: React.FC = () => {
           </nav>
 
           {/* CTA Button - Desktop */}
-          <div className="hidden md:flex items-center ml-4">
+          <div className="hidden md:flex items-center ml-2">
             <Link
               to="/engage-with-us"
               className="bg-[#005BA9] text-white hover:text-white px-4 py-2.5 rounded-full text-sm font-medium transition-colors hover:no-underline whitespace-nowrap"

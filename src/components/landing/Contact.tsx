@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 const Contact: React.FC = () => {
   return (
-    <section className="py-16 px-4 bg-transparent" id="contact">
+    <section className="py-16 px-4 bg-transparent mt-16 mb-8" id="contact">
       <div className="max-w-6xl mx-auto">
         <a
           href="#about-us"
