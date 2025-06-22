@@ -12,6 +12,8 @@ import Events from "./pages/Events";
 import ResearchAndInnovation from "./pages/ResearchAndInnovation";
 import Services from "./pages/Services";
 import Engage from "./pages/Engage";
+import BootcampDetails from "./pages/BootcampDetails";
+import FocusGroups from "./pages/FocusGroups";
 
 const queryClient = new QueryClient();
 
@@ -26,12 +28,14 @@ const App = () => (
         <Route path="/engage-with-us" element={<Engage />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/ai-bootcamps" element={<Bootcamps />} />
+        <Route path="/:id/ai-bootcamps" element={<BootcampDetails />} />
         <Route
           path="/research-innovation"
           element={<ResearchAndInnovation />}
         />
         <Route path="/happenings" element={<Happening />} />
         <Route path="/webinars" element={<Webinar />} />
+        <Route path="/focus-groups" element={<FocusGroups />} />
         <Route path="/visual-journey" element={<VisualJourney />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

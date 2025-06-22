@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import DropdownMenu from "./DropdownMenu";
 import type { DropdownMenuProps } from "../../types/header";
 
@@ -8,19 +8,40 @@ const FocusGroupsDropdown: React.FC<FocusGroupsDropdownProps> = ({
   isOpen,
   onClose,
 }) => {
+  useEffect(() => {
+    // Force scroll to top on component mount
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth", // "smooth" for animation
+    });
+
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, []);
+
   return (
     <DropdownMenu isOpen={isOpen} onClose={onClose}>
       <div className="p-6 w-[500px]">
         <div className="grid grid-cols-2 gap-8">
           {/* Left Column - Focus Groups */}
           <div>
-            <h3 className="font-semibold text-gray-900 text-lg mb-4">
-              ENTERPRISE AI ADOPTION
+            <h3 className="font-semibold text-gray-900 mb-4 text-lg">
+              Focus Groups
             </h3>
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#capacity-building"
+                  href="/focus-groups#enterprise-ai-adoption"
+                  className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
+                  onClick={onClose}
+                >
+                  Enterprise AI Adoption
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/focus-groups#capacity-building"
                   className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                   onClick={onClose}
                 >
@@ -29,7 +50,7 @@ const FocusGroupsDropdown: React.FC<FocusGroupsDropdownProps> = ({
               </li>
               <li>
                 <a
-                  href="#partner"
+                  href="/focus-groups#partner"
                   className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                   onClick={onClose}
                 >

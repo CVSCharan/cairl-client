@@ -33,7 +33,7 @@ const About = () => {
   }, []); // Empty dependency array means this runs once on mount
 
   return (
-    <main className="relative overflow-hidden bg-[#F6F6F6]">
+    <main className="relative min-h-screen overflow-hidden bg-[#F6F6F6]">
       <Header />
 
       <div className="relative w-full">
@@ -48,9 +48,9 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-20 pt-28">
           {/* About Header */}
           <div className="text-center flex flex-col items-center mb-12">
-            <div className="inline-block px-4 py-2 rounded-full bg-[#E5F5FC] text-[#005BA9] text-sm font-medium mb-4">
+            <h4 className="inline-block px-4 py-2 rounded-full bg-[#E5F5FC] text-[#005BA9] text-sm font-medium mb-4">
               About Us
-            </div>
+            </h4>
             <h1 className="text-4xl font-bold text-gray-900 mb-4 w-[700px]">
               India’s Collaborative AI Ecosystem for Social Good, Research &
               Innovation
