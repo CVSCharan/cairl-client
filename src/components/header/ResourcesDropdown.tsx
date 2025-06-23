@@ -60,7 +60,7 @@ const ResourcesDropdown: React.FC<ResourcesDropdownProps> = ({
                   className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                   onClick={onClose}
                 >
-                  DATASETS FOR INNOVATION
+                  Datasets for Innovation
                 </a>
               </li>
               <li>
@@ -69,7 +69,7 @@ const ResourcesDropdown: React.FC<ResourcesDropdownProps> = ({
                   className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                   onClick={onClose}
                 >
-                  AFFORDABLE AI COMPUTING
+                  Affordable AI Computing
                 </a>
               </li>
             </ul>

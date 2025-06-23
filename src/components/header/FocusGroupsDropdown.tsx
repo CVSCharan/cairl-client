@@ -45,7 +45,7 @@ const FocusGroupsDropdown: React.FC<FocusGroupsDropdownProps> = ({
                   className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                   onClick={onClose}
                 >
-                  CAPACITY BUILDING & KNOWLEDGE MANAGEMENT
+                  Capacity Building & Knowledge Management
                 </a>
               </li>
               <li>
@@ -54,7 +54,7 @@ const FocusGroupsDropdown: React.FC<FocusGroupsDropdownProps> = ({
                   className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                   onClick={onClose}
                 >
-                  PARTNER WITH CAIRL
+                  Partner with CAIRL
                 </a>
               </li>
             </ul>

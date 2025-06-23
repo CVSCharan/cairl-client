@@ -46,7 +46,7 @@ const Contact = () => {
 
       <div className="relative w-full">
         {/* Background Element - Now covers header to form */}
-        <div className="absolute top-0 left-0 w-full h-full z-0 opacity-25 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full z-0 opacity-45 pointer-events-none">
           <img
             src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750188690/Element_hvtzp4.png"
             alt="Background Element"
@@ -227,7 +227,7 @@ const Contact = () => {
           </div>
           {/* Contact Info Cards */}
           <section className="py-16 px-4 bg-transparent z-10" id="contact">
-            <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col justify-center items-center max-w-6xl mx-auto">
               <a
                 href="#about-us"
                 className="bg-[#E5F5FC] text-[#005BA9] px-4 py-2 rounded-full"
@@ -235,7 +235,7 @@ const Contact = () => {
                 Contact
               </a>
               <div className="flex justify-between items-center mb-4 mt-8">
-                <div>
+                <div className="flex flex-col justify-center items-center">
                   <h2 className="text-3xl font-bold text-gray-900">
                     Connect with us
                   </h2>
@@ -243,12 +243,6 @@ const Contact = () => {
                     Have questions, ideas, or just want to connect?
                   </p>
                 </div>
-                <a
-                  href="#all-events"
-                  className="bg-[#005BA9] text-white hover:text-white px-4 py-2 rounded-full font-medium flex items-center"
-                >
-                  Know more
-                </a>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -305,14 +299,14 @@ const Contact = () => {
       {/* Map */}
       <div className="rounded-lg overflow-hidden shadow-sm border border-gray-100 h-96">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.2954088332393!2d78.34766491487767!3d17.445146988040436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93dc8c5d69df%3A0x19688beb557fa0ee!2sT-Hub%202.0!5e0!3m2!1sen!2sin!4v1651234567890!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.0618414487137!2d78.3766555750799!3d17.434551003999915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93e37831f177%3A0x32d4499d34baaa78!2sT-Hub%20Phase%202!5e0!3m2!1sen!2sin!4v1719228980712!5m2!1sen!2sin"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen={true}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="CAiRL Location"
+          title="CAiRL at T-Hub Phase 2, Madhapur"
         />
       </div>
 
