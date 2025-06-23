@@ -94,9 +94,12 @@ const Happening = () => {
               Why it Matters: CAiRL's events shape AI conversations and ignite
               industry collaboration.
             </p>
-            <button className="px-6 py-3 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors">
+            <a
+              href="/events"
+              className="px-6 py-3 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors"
+            >
               Know more
-            </button>
+            </a>
           </div>
           <div className="rounded-xl h-full min-h-[300px] overflow-hidden">
             <img
@@ -155,9 +158,12 @@ const Happening = () => {
             <p className="font-semibold text-gray-700 mb-4">
               Why it Matters: Stay ahead with AI insights from global experts.
             </p>
-            <button className="px-6 py-3 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors">
+            <a
+              href="/webinars"
+              className="px-6 py-3 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors"
+            >
               Know more
-            </button>
+            </a>
           </div>
         </div>
 
@@ -207,9 +213,12 @@ const Happening = () => {
               Explore our journey through images & videos – See how CAiRL is
               shaping AI's future!
             </p>
-            <button className="px-6 py-3 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors">
+            <a
+              href="/visual-journey"
+              className="px-6 py-3 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors"
+            >
               Know more
-            </button>
+            </a>
           </div>
           <div className="rounded-xl h-full max-h-[450px] overflow-hidden">
             <img

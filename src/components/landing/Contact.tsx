@@ -1,5 +1,6 @@
 import React from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Contact: React.FC = () => {
   return (
@@ -20,12 +21,12 @@ const Contact: React.FC = () => {
               Have questions, ideas, or just want to connect?
             </p>
           </div>
-          <a
-            href="#all-events"
+          <Link
+            to="/contact"
             className="bg-[#005BA9] text-white hover:text-white px-4 py-2 rounded-full font-medium flex items-center"
           >
             Know more
-          </a>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">

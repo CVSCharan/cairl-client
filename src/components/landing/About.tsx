@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const About: React.FC = () => {
   return (
@@ -28,12 +29,12 @@ const About: React.FC = () => {
             benefit all of society.
           </p>
           <div className="cta-container mt-10">
-            <a
-              href="#learn-more"
+            <Link
+              to="/about-us"
               className="bg-[#005BA9] text-white hover:text-white px-6 py-4 rounded-full"
             >
               Know more
-            </a>
+            </Link>
           </div>
         </div>
       </div>
