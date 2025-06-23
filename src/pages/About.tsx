@@ -160,7 +160,9 @@ const About = () => {
       </div>
 
       {/* FAQs Section */}
-      <FAQs />
+      <div id="faqs">
+        <FAQs />
+      </div>
 
       <Footer />
     </main>
