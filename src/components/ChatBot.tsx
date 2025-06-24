@@ -221,13 +221,13 @@ const ChatBot: React.FC = () => {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-4 right-4 bg-blue-600 text-white p-4 rounded-full shadow-lg z-50 hover:bg-blue-700 transition-all transform hover:scale-105"
+          className="fixed bottom-4 right-4 bg-white p-0 rounded-full shadow-lg z-50 hover:shadow-xl transition-all transform hover:scale-105 focus:outline-none"
           aria-label="Open chat"
         >
           <img
             src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750176556/chat_icon_endzvg.png"
             alt="Chat icon"
-            className="w-6 h-6"
+            className="w-14 h-14 rounded-full object-cover border-2 border-gray-100"
           />
         </button>
       )}
