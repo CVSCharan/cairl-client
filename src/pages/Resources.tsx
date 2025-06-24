@@ -53,82 +53,72 @@ const Resources = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        {/* Events Section */}
+        {/* AI Use Cases & Implementation Section */}
         <div
-          id="events"
+          id="ai-use-case"
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20"
         >
           <div>
-            <h2 className="text-3xl font-bold text-[#005BA9] mb-6">Events</h2>
+            <h2 className="text-3xl font-bold text-[#005BA9] mb-6">
+              AI Use Cases & Implementation
+            </h2>
             <p className="text-gray-700 mb-6">
-              CAiRL hosts and collaborates on high-impact AI events that bring
-              together:
+              Real-world success stories, case studies & sector-specific guides
+              showcasing AI in action—across:
             </p>
-            <ul className="space-y-4 mb-8">
-              <li className="flex items-start">
-                <span className="bg-[#005BA9] text-white rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-3">
-                  •
+            {/* Domain Tags */}
+            <div className="flex flex-wrap gap-3 mb-6">
+              {[
+                "Healthcare",
+                "Lifesciences",
+                "Education",
+                "Agriculture",
+                "Finance",
+                "Energy",
+                "Biotech (with 1000+ mapped use cases)",
+              ].map((domain, idx) => (
+                <span
+                  key={idx}
+                  className="border bg-[#F2F8FF] border-gray-400 text-gray-800 px-4 py-1 rounded-full text-sm"
+                >
+                  {domain}
                 </span>
-                <span className="text-gray-700">
-                  Global AI Leaders – Experts from industry, academia, and
-                  government.
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="bg-[#005BA9] text-white rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-3">
-                  •
-                </span>
-                <span className="text-gray-700">
-                  Innovators & Researchers – Pioneering breakthroughs in AI.
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="bg-[#005BA9] text-white rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-3">
-                  •
-                </span>
-                <span className="text-gray-700">
-                  Startups & Enterprises – Scaling AI adoption across
-                  industries.
-                </span>
-              </li>
-            </ul>
-            <p className="font-semibold text-gray-700 mb-4">
-              Why it Matters: CAiRL's events shape AI conversations and ignite
-              industry collaboration.
-            </p>
+              ))}
+            </div>
             <a
               href="/events"
               className="px-6 py-3 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors"
             >
-              Know more
+              View more
             </a>
           </div>
           <div className="rounded-xl h-full min-h-[300px] overflow-hidden">
             <img
-              src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750262916/happenings-events-card-img_fjbkec.png"
+              src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750789703/resources-img-1_gg2dsv.png"
               alt="CAiRL Events"
               className="w-full h-full object-cover"
             />
           </div>
         </div>
 
-        {/* Webinars Section */}
+        {/* Datasets for Innovation Section */}
         <div
-          id="webinars"
+          id="datasets"
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20"
         >
           <div className="order-last lg:order-first rounded-xl h-full min-h-[300px] overflow-hidden">
             <img
-              src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750262924/happenings-webinar-card-img_othucx.jpg"
+              src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750789703/resources-img-2_cwcxni.png"
               alt="CAiRL Webinars"
               className="w-full h-full object-cover"
             />
           </div>
           <div>
-            <h2 className="text-3xl font-bold text-[#005BA9] mb-6">Webinars</h2>
+            <h2 className="text-3xl font-bold text-[#005BA9] mb-6">
+              Datasets for Innovation
+            </h2>
             <p className="text-gray-700 mb-6">
-              Our webinars provide on-demand AI expertise from world-class
-              speakers:
+              Tap into curated, AI-ready datasets:
             </p>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start">
@@ -136,7 +126,7 @@ const Resources = () => {
                   •
                 </span>
                 <span className="text-gray-700">
-                  Exclusive Fireside Chats – Conversations with AI pioneers.
+                  ADEx (Telangana Agriculture Database)
                 </span>
               </li>
               <li className="flex items-start">
@@ -144,76 +134,59 @@ const Resources = () => {
                   •
                 </span>
                 <span className="text-gray-700">
-                  Live Demos & Workshops – Deep dives into AI applications.
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="bg-[#005BA9] text-white rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-3">
-                  •
-                </span>
-                <span className="text-gray-700">
-                  Expert Panels – Discussing AI trends, regulations, and
-                  innovations.
+                  Sector-Specific Datasets: Healthcare, Energy, Finance & more .
                 </span>
               </li>
             </ul>
             <p className="font-semibold text-gray-700 mb-4">
-              Why it Matters: Stay ahead with AI insights from global experts.
+              **Access is free or low-cost under a sustainable subscription
+              model.
             </p>
             <a
               href="/webinars"
               className="px-6 py-3 bg-[#005BA9] text-white rounded-lg font-medium hover:bg-[#004a8a] transition-colors"
             >
-              Know more
+              View more
             </a>
           </div>
         </div>
 
-        {/* Visual Journey Section */}
+        {/* Affordable AI Computing Section */}
         <div
-          id="visual-journey"
+          id="affordable-ai-computing"
           className="grid grid-cols-1 lg:grid-cols-2 gap-12"
         >
           <div>
             <h2 className="text-3xl font-bold text-[#005BA9] mb-6">
-              Visual Journey
+              Affordable AI Computing
             </h2>
             <p className="text-gray-700 mb-6">
-              A picture speaks a thousand words—our Visual Journey captures the
-              milestones, achievements, and impact of CAiRL.
+              Accelerate AI development with cloud access via:
             </p>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start">
                 <span className="bg-[#005BA9] text-white rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-3">
                   •
                 </span>
-                <span className="text-gray-700">
-                  Awards & Recognitions – Honouring our contributions to AI
-                  innovation.
-                </span>
+                <span className="text-gray-700">Microsoft Azure AI</span>
               </li>
               <li className="flex items-start">
                 <span className="bg-[#005BA9] text-white rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-3">
                   •
                 </span>
-                <span className="text-gray-700">
-                  Achiever's Journey – Showcasing winners of CAiRL Hackathons &
-                  Challenges.
-                </span>
+                <span className="text-gray-700">AWS AI/ML Services</span>
               </li>
               <li className="flex items-start">
                 <span className="bg-[#005BA9] text-white rounded-full w-5 h-5 flex items-center justify-center mt-1 mr-3">
                   •
                 </span>
-                <span className="text-gray-700">
-                  Event Highlights – A glimpse into our summits, conferences,
-                  and AI bootcamps.
-                </span>
+                <span className="text-gray-700">NVIDIA AI Cloud</span>
               </li>
             </ul>
             <p className="font-semibold text-gray-700 mb-4">
-              Explore our journey through images & videos – See how CAiRL is
-              shaping AI's future!
+              **Discounted access for social good projects
+              <br />
+              **Managed by CAiRL’s non-profit model to ensure sustainability
             </p>
             <a
               href="/visual-journey"
@@ -224,7 +197,7 @@ const Resources = () => {
           </div>
           <div className="rounded-xl h-full max-h-[450px] overflow-hidden">
             <img
-              src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750262917/happenings-visual-journey-card-img_ppw12b.jpg"
+              src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750789704/resources-img-3_dihgt8.png"
               alt="CAiRL Visual Journey"
               className="w-full h-full object-cover"
             />
