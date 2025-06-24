@@ -62,7 +62,7 @@ const Header: React.FC = () => {
               onClick={closeAllDropdowns}
             >
               <img
-                className="h-8 w-auto"
+                className="h-9 w-auto"
                 src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750176558/cairl_logo_sx9gcw.png"
                 alt="CAiRL"
               />

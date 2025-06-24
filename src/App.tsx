@@ -14,6 +14,7 @@ import Services from "./pages/Services";
 import Engage from "./pages/Engage";
 import BootcampDetails from "./pages/BootcampDetails";
 import FocusGroups from "./pages/FocusGroups";
+import ChatBot from "./components/ChatBot";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,8 @@ const App = () => (
         <Route path="/visual-journey" element={<VisualJourney />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      {/* ChatBot component available on all pages */}
+      <ChatBot />
     </BrowserRouter>
   </QueryClientProvider>
 );
