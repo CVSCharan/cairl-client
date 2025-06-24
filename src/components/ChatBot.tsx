@@ -280,9 +280,9 @@ const ChatBot: React.FC = () => {
                   {message.sender === "bot" && (
                     <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center flex-shrink-0 border border-gray-200">
                       <img
-                        src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750176558/cairl_logo_sx9gcw.png"
-                        alt="CAiRL"
-                        className="w-6 h-6 object-contain"
+                        src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750176556/chat_icon_endzvg.png"
+                        alt="Chat icon"
+                        className="w-6 h-6 object-contain rounded-full"
                       />
                     </div>
                   )}
