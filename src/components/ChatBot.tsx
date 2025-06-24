@@ -234,37 +234,33 @@ const ChatBot: React.FC = () => {
 
       {/* Chat interface */}
       {isOpen && (
-        <div className="fixed bottom-4 right-4 w-96 h-[600px] bg-white border border-gray-200 rounded-lg shadow-xl z-50 flex flex-col">
+        <div className="fixed bottom-6 right-4 w-96 h-[600px] bg-white border border-gray-200 rounded-lg shadow-xl z-50 flex flex-col">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-gradient-to-r from-blue-50 to-indigo-50">
-            <div className="flex items-center gap-3">
-              <img
-                src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750176558/cairl_logo_sx9gcw.png"
-                alt="CAiRL Logo"
-                className="w-8 h-8 object-contain"
-              />
-              <div>
-                <h3 className="font-semibold text-gray-800">CAiRL Assistant</h3>
-                <p className="text-xs text-gray-500">
+            <div className="flex items-center">
+              <div className="flex-shrink-0 mr-3">
+                <img
+                  src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750176660/footer-logo_jgk1wb.png"
+                  alt="CAiRL Logo"
+                  className="w-12 h-12 object-contain"
+                />
+              </div>
+              <div className="flex flex-col justify-center mt-6">
+                <h3 className="text-base font-medium text-gray-800 leading-tight">
+                  CAiRL Assistant
+                </h3>
+                <p className="text-xs text-gray-500 mt-0.2">
                   AI Research & Innovation
                 </p>
               </div>
             </div>
-            <div className="flex gap-1">
-              <button
-                onClick={handleReset}
-                className="h-8 w-8 p-0 hover:bg-gray-100 rounded-md flex items-center justify-center transition-colors"
-                title="Reset conversation"
-              >
-                <RotateCcw className="w-4 h-4 text-gray-600" />
-              </button>
-              <button
-                onClick={handleClose}
-                className="h-8 w-8 p-0 hover:bg-gray-100 rounded-md flex items-center justify-center transition-colors"
-              >
-                <X className="w-4 h-4 text-gray-600" />
-              </button>
-            </div>
+            <button
+              onClick={handleClose}
+              className="h-9 w-9 rounded-full flex items-center justify-center transition-colors duration-200 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-300"
+              aria-label="Close chat"
+            >
+              <X className="w-4 h-4 text-gray-500" />
+            </button>
           </div>
 
           {/* Messages */}
@@ -310,10 +306,9 @@ const ChatBot: React.FC = () => {
               {showFAQs &&
                 messages.length > 0 &&
                 messages[messages.length - 1].sender === "bot" && (
-                  <div className="space-y-3 mt-4 p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500">
+                  <div className="space-y-3 mt-4 p-3 bg-gray-50 rounded-lg">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <ChevronDown className="w-4 h-4" />
-                      <span className="font-medium">Select a question:</span>
+                      <p className="font-medium">Select a question:</p>
                     </div>
                     <div className="space-y-2">
                       {questions.map((question, index) => (
