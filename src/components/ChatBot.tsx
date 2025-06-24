@@ -202,19 +202,6 @@ const ChatBot: React.FC = () => {
     setShowFAQs(true);
   };
 
-  const handleReset = () => {
-    setMessages([
-      {
-        id: "1",
-        text: getWelcomeMessage(),
-        sender: "bot",
-        timestamp: new Date(),
-      },
-    ]);
-    setShowFAQs(true);
-    setInputValue("");
-  };
-
   return (
     <>
       {/* Chat toggle button */}
