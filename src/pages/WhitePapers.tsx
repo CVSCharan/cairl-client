@@ -59,7 +59,7 @@ const WhitePapers = () => {
                 </span>
               </div>
               <a
-                href="#"
+                href="/white-papers/training-a-voice-assistant"
                 className="text-[#005BA9] font-medium hover:underline inline-flex items-center"
               >
                 Read More
@@ -115,7 +115,7 @@ const WhitePapers = () => {
                 </span>
               </div>
               <a
-                href="#"
+                href="/white-papers/towards-universally-ethical-ai"
                 className="text-[#005BA9] font-medium hover:underline inline-flex items-center"
               >
                 Read More
@@ -167,7 +167,7 @@ const WhitePapers = () => {
                 </span>
               </div>
               <a
-                href="#"
+                href="/white-papers/testing-networks-built-for-and-enhanced-with-ai"
                 className="text-[#005BA9] font-medium hover:underline inline-flex items-center"
               >
                 Read More
