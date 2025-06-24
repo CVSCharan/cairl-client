@@ -16,6 +16,8 @@ import BootcampDetails from "./pages/BootcampDetails";
 import FocusGroups from "./pages/FocusGroups";
 import ChatBot from "./components/ChatBot";
 import Resources from "./pages/Resources";
+import WhitePapers from "./pages/WhitePapers";
+import WhitePaperDetails from "./pages/WhitePaperDetails";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +42,8 @@ const App = () => (
         <Route path="/focus-groups" element={<FocusGroups />} />
         <Route path="/visual-journey" element={<VisualJourney />} />
         <Route path="/resources" element={<Resources />} />
+        <Route path="/white-papers" element={<WhitePapers />} />
+        <Route path="/white-papers/:id" element={<WhitePaperDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {/* ChatBot component available on all pages */}
