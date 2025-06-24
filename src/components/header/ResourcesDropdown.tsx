@@ -20,29 +20,29 @@ const ResourcesDropdown: React.FC<ResourcesDropdownProps> = ({
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#blog"
+                  href="/blogs"
                   className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                   onClick={onClose}
                 >
-                  Blog
+                  Blogs
                 </a>
               </li>
               <li>
                 <a
-                  href="#podcast"
+                  href="/podcasts"
                   className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                   onClick={onClose}
                 >
-                  Podcast
+                  Podcasts
                 </a>
               </li>
               <li>
                 <a
-                  href="#whitepaper"
+                  href="/white-papers"
                   className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                   onClick={onClose}
                 >
-                  Whitepaper
+                  Whitepapers
                 </a>
               </li>
             </ul>
@@ -56,7 +56,7 @@ const ResourcesDropdown: React.FC<ResourcesDropdownProps> = ({
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#datasets"
+                  href="/resources#datasets"
                   className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                   onClick={onClose}
                 >
@@ -65,7 +65,7 @@ const ResourcesDropdown: React.FC<ResourcesDropdownProps> = ({
               </li>
               <li>
                 <a
-                  href="#computing"
+                  href="/resources#affordable-ai-computing"
                   className="text-gray-600 hover:text-blue-600 text-base block py-1.5"
                   onClick={onClose}
                 >

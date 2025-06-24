@@ -18,6 +18,9 @@ import ChatBot from "./components/ChatBot";
 import Resources from "./pages/Resources";
 import WhitePapers from "./pages/WhitePapers";
 import WhitePaperDetails from "./pages/WhitePaperDetails";
+import BlogDetails from "./pages/BlogDetails";
+import Blogs from "./pages/Blogs";
+import Podcasts from "./pages/Podcasts";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +47,9 @@ const App = () => (
         <Route path="/resources" element={<Resources />} />
         <Route path="/white-papers" element={<WhitePapers />} />
         <Route path="/white-papers/:id" element={<WhitePaperDetails />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/:id" element={<BlogDetails />} />
+        <Route path="/podcasts" element={<Podcasts />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {/* ChatBot component available on all pages */}
