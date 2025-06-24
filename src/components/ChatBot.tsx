@@ -16,12 +16,6 @@ interface Message {
   isTyping?: boolean;
 }
 
-interface FAQ {
-  question: string;
-  answer: string;
-  tags?: string[];
-}
-
 const questions = [
   "What is CAiRL's mission?",
   "How does CAiRL collaborate with startups?",
@@ -80,6 +74,8 @@ const ChatBot: React.FC = () => {
 
   useEffect(() => {
     scrollToBottom();
+
+    console.log(typingMessageId);
   }, [messages]);
 
   // Typewriter effect for bot messages

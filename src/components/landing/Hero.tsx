@@ -22,9 +22,9 @@ const Hero: React.FC = () => {
   const partnerLogos = [
     "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750176558/scroll_img_4_nfar9d.png",
     "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750176557/scroll_img_3_ttadxy.png",
+    "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750749649/Ccmb_emblem_rqgags.png",
     "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750176559/scroll_img_2_rc4chz.png",
     "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750176558/scroll_img_1_opp3ip.png",
-    "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750749649/Ccmb_emblem_rqgags.png",
   ];
 
   return (
