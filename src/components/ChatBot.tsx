@@ -1,12 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import {
-  X,
-  Send,
-  MessageCircle,
-  ChevronDown,
-  User,
-  RotateCcw,
-} from "lucide-react";
+import { X, Send, ChevronDown, User, RotateCcw } from "lucide-react";
 
 interface Message {
   id: string;
@@ -231,7 +224,11 @@ const ChatBot: React.FC = () => {
           className="fixed bottom-4 right-4 bg-blue-600 text-white p-4 rounded-full shadow-lg z-50 hover:bg-blue-700 transition-all transform hover:scale-105"
           aria-label="Open chat"
         >
-          <MessageCircle className="w-6 h-6" />
+          <img
+            src="https://res.cloudinary.com/dnyouhvwj/image/upload/v1750176556/chat_icon_endzvg.png"
+            alt="Chat icon"
+            className="w-6 h-6"
+          />
         </button>
       )}
 
