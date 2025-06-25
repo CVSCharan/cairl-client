@@ -18,9 +18,9 @@ const BlogCard: React.FC<BlogCardProps> = ({
   id,
   title,
   category,
-//   date,
-//   author,
-//   authorImage,
+  date,
+  author,
+  authorImage,
   imageUrl,
   featured = false,
 }) => {
@@ -51,7 +51,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
       </div>
 
       {/* Blog Info */}
-      {/* <div
+      <div
         className={`${
           featured
             ? "absolute bottom-0 left-0 right-0 bg-white p-6 m-4 rounded-lg"
@@ -75,7 +75,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
           <span className="text-sm text-gray-600">{author}</span>
           <span className="text-sm text-gray-400">{date}</span>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
@@ -91,7 +91,8 @@ const Blogs = () => {
     date: "August 23, 2023",
     author: "James Peterson",
     authorImage: "https://randomuser.me/api/portraits/men/32.jpg",
-    imageUrl: "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750830314/blogs-main-img_irp2bd.png",
+    imageUrl:
+      "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750830314/blogs-main-img_irp2bd.png",
     featured: true,
   };
 
@@ -134,7 +135,8 @@ const Blogs = () => {
       date: "August 23, 2023",
       author: "Emily Davis",
       authorImage: "https://randomuser.me/api/portraits/women/67.jpg",
-      imageUrl: "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750830264/blogs-img-2_vp7vn0.png",
+      imageUrl:
+        "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750830264/blogs-img-2_vp7vn0.png",
     },
     {
       id: "blog6",
@@ -144,7 +146,8 @@ const Blogs = () => {
       date: "August 23, 2023",
       author: "David Miller",
       authorImage: "https://randomuser.me/api/portraits/men/75.jpg",
-      imageUrl: "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750830275/blogs-imgs-1_buosgc.png",
+      imageUrl:
+        "https://res.cloudinary.com/dnyouhvwj/image/upload/v1750830275/blogs-imgs-1_buosgc.png",
     },
     {
       id: "blog7",
