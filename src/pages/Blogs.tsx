@@ -18,9 +18,9 @@ const BlogCard: React.FC<BlogCardProps> = ({
   id,
   title,
   category,
-  date,
-  author,
-  authorImage,
+//   date,
+//   author,
+//   authorImage,
   imageUrl,
   featured = false,
 }) => {
